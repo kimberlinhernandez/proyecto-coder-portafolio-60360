@@ -1,0 +1,198 @@
+/*
+// <uniquifier>: Use a uniquifier for the class name
+// <weight>: Use a value from 100 to 1000
+
+.dm-sans-<uniquifier> {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+/*--Header--*/
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+  font-weight: bold;
+  background-color: whitesmoke;
+}
+
+ul li {
+  display: inline-block;
+  padding: 0px 20px;
+  font-family: "DM Sans", sans-serif;
+}
+
+/*-- Quizás convertir esto en una etiqueta a --*/
+.logo {
+  color: gray;
+  font-size: larger;
+}
+
+.logo:hover {
+  color:#8C2D18;
+  font-style: italic;
+}
+
+h1 {
+  color: #bb3c15;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing:auto;
+  font-size: xx-large;
+  font-weight:700;
+  font-style: normal;
+}
+
+.presentacion {
+  display: flex;
+  justify-content:space-between;
+  padding: 10%;
+}
+
+/*-- Revisar estos valores de la portada --*/ 
+
+/*-- Portada index --*/
+
+.portada {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap: wrap;
+  min-height: 50vh;
+}
+
+.portada img {
+  display: flex;
+  width: 40%;
+  justify-content:right;
+}
+
+p {
+  color: #0D0D0D;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  margin-left: 20px;
+}
+
+.titulo-secciones {
+  color: #BF3617;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin-left: 10px;
+}
+
+
+section h3 {
+  color: #0D0D0D;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: medium;
+  font-style: normal;
+  color: black;
+}
+
+a:hover {
+  color: #8C2D18;
+  font-weight: bold;
+  text-decoration: overline;
+}
+
+.articulos-blog {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+article {
+  flex: 300px;
+}
