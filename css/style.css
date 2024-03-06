@@ -83,18 +83,26 @@ ol {
   list-style-type: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 /*--Header--*/
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 2%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 2%;
+  padding: 1rem;
+  gap: 1rem;
   font-weight: bold;
   background-color: whitesmoke;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 ul li {
