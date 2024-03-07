@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,26 +11,33 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/4536c38c7f.js" crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
     <title>Kim Hernández - SEO Specialist</title>
 </head>
 
 <body>
-    <header>
-        <div class="container"></div>
-        <nav>
-            <p class="logo">Kim Hernández</p>
-            <ul>
-                <li class="menu-in">Inicio</li>
-                <li><a href="./pages/experiencia.html">Experiencia</a></li>
-                <li><a href="./pages/notas.html">Notas</a></li>
-                <li><a href="./pages/blog.html">Blog</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
+    <header class="header">
+        <nav class="nav">
+                <a href="./index.html" class="logo">Kim Hernández</a>
+                <button class="burger-menu"> 
+                    <i class="fa-solid fa-bars"></i>
+                    <!-- Aquí creo que algo estoy haciendo mal insertando el menú-->
+                </button>
+            <ul class="nav-menu nav-menu-visible">
+                <li class="nav-menu-item">Inicio</li>
+                <li class="nav-menu-item"><a href="./pages/experiencia.html" class="nav-menu-link">Experiencia</a></li>
+                <li class="nav-menu-item"><a href="./pages/notas.html" class="nav-menu-link">Notas</a></li>
+                <li class="nav-menu-item"><a href="./pages/blog.html" class="nav-menu-link">Blog</a></li>
+                <li class="nav-menu-item"><a href="./pages/contacto.html" class="nav-menu-link">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <section class="portada">
-        <div><h1 class="presentacion">Hola, mi nombre es Kimberlin Hernández y soy <br>Copywriter...</h1></div>
-        
+        <div>
+            <h1 class="presentacion">Hola, mi nombre es Kimberlin Hernández y soy <br>Copywriter...</h1>
+        </div>
+
         <img src="./img/illustrations/kim-hernandez.png" alt="kim-hernandez-ilustracion">
     </section>
     <div>
@@ -45,14 +52,16 @@
                     dicta ratione quaerat, tenetur mollitia odit suscipit, vero, quos ut. Maxime voluptatibus dolorum
                     officia veritatis vel voluptas quisquam eveniet exercitationem a qui beatae, minus repellendus?</p>
 
-                    <p>Este es un texto de prueba</p>
+                <p>Este es un texto de prueba</p>
                 <input type="button" value="Conoce mi experiencia">
             </div>
         </section>
 
         <section class="articulos-blog">
             <h2 class="titulo-secciones">Articulos recientes del blog</h2>
-            <div><p>¿Quieres leer contenido?</p></div>
+            <div>
+                <p>¿Quieres leer contenido?</p>
+            </div>
             <div>
                 <div class="articulos">
                     <h3>Articulo</h3>
@@ -63,28 +72,28 @@
                     <h3>Articulo</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, doloremque?</p>
                     <button>Leer más</button>
-                    </div>
                 </div>
-                <div class="articulos">
-                    <h3>Articulo</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, doloremque?</p>
-                    <button>Leer más</button>
-                </div>
-                <div class="articulos">
-                    <h3>Articulo</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, doloremque?</p>
-                    <button>Leer más</button>
-                </div>
-                <div class="articulos">
-                    <h3>Articulo</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, doloremque?</p>
-                    <button>Leer más</button>
-                </div>
-                <div class="articulos">
-                    <h3>Articulo</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, doloremque?</p>
-                    <button>Leer más</button>
-                </div>
+            </div>
+            <div class="articulos">
+                <h3>Articulo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, doloremque?</p>
+                <button>Leer más</button>
+            </div>
+            <div class="articulos">
+                <h3>Articulo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, doloremque?</p>
+                <button>Leer más</button>
+            </div>
+            <div class="articulos">
+                <h3>Articulo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, doloremque?</p>
+                <button>Leer más</button>
+            </div>
+            <div class="articulos">
+                <h3>Articulo</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, doloremque?</p>
+                <button>Leer más</button>
+            </div>
             </div>
         </section>
 
