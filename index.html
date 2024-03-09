@@ -12,27 +12,39 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/4536c38c7f.js" crossorigin="anonymous"></script>
-    <script defer src="index.js"></script>
-    <title>Kim Hernández - SEO Specialist</title>
+    <title>Kim Hernández - Copywriter</title>
 </head>
 
 <body>
     <header class="header">
+        <div>
+            <a href="./index.html" class="logo">Kim Hernández</a>
+        </div>
         <nav class="nav">
-                <a href="./index.html" class="logo">Kim Hernández</a>
-                <button class="burger-menu"> 
-                    <i class="fa-solid fa-bars"></i>
-                    <!-- Aquí creo que algo estoy haciendo mal insertando el menú-->
-                </button>
-            <ul class="nav-menu nav-menu-visible">
-                <li class="nav-menu-item">Inicio</li>
-                <li class="nav-menu-item"><a href="./pages/experiencia.html" class="nav-menu-link">Experiencia</a></li>
-                <li class="nav-menu-item"><a href="./pages/notas.html" class="nav-menu-link">Notas</a></li>
-                <li class="nav-menu-item"><a href="./pages/blog.html" class="nav-menu-link">Blog</a></li>
-                <li class="nav-menu-item"><a href="./pages/contacto.html" class="nav-menu-link">Contacto</a></li>
+            <ul class="nav-links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./pages/experiencia.html">Experiencia</a></li>
+                <li><a href="./pages/notas.html">Notas</a></li>
+                <li><a href="./pages/blog.html">Blog</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
+        <a onclick="openNav()" class="menu" href="#"><button>Menú</button></a>
+
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="./index.html">Inicio</a>
+                <a href="./pages/experiencia.html">Experiencia</a>
+                <a href="./pages/notas.html">Notas</a>
+                <a href="./pages/blog.html">Blog</a>
+                <a href="./pages/contacto.html">Contacto</a>
+            </div>
+        </div>
+
     </header>
+
+    <main>
     <section class="portada">
         <div>
             <h1 class="presentacion">Hola, mi nombre es Kimberlin Hernández y soy <br>Copywriter...</h1>
@@ -42,7 +54,6 @@
     </section>
     <div>
     </div>
-    <main>
         <section id="mi-trabajo">
             <div class="container">
                 <h2 class="titulo-secciones">Mi trabajo</h2>
@@ -60,7 +71,7 @@
         <section class="articulos-blog">
             <h2 class="titulo-secciones">Articulos recientes del blog</h2>
             <div>
-                <p>¿Quieres leer contenido?</p>
+                <p>¿Quieres leer más contenido?</p>
             </div>
             <div>
                 <div class="articulos">
@@ -101,7 +112,6 @@
 
     </main>
 
-
     <footer>
 
         <a href="">Link 1</a>
@@ -111,6 +121,7 @@
 
     </footer>
 
+    <script type="text/javascript" src="nav.js"></script>
 </body>
 
 </html>

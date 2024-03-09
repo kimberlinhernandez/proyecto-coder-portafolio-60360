@@ -7,22 +7,48 @@
     <title>Contacto</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <p class="logo">Kim Hernández</p>
-            <ul>
+    <header class="header">
+        <div>
+            <a href="../index.html" class="logo">Kim Hernández</a>
+        </div>
+        <nav class="nav">
+            <ul class="nav-links">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./experiencia.html">Experiencia</a></li>
                 <li><a href="./notas.html">Notas</a></li>
                 <li><a href="./blog.html">Blog</a></li>
-                <li>Contacto</li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
+        <a onclick="openNav()" class="menu" href="#"><button>Menú</button></a>
+
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="../index.html">Inicio</a>
+                <a href="./experiencia.html">Experiencia</a>
+                <a href="./notas.html">Notas</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./contacto.html">Contacto</a>
+            </div>
+        </div>
 
     </header>
 
+    <main>
+        <!-- Aquí me falta insertar la imagen-->
+        <h2>Texto de prueba</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, sit?</p>
+
+    </main>
+
     <footer>
-        
+        <a href="">Link 1</a>
+        <a href="">Link 2</a>
+        <a href="">Link 3</a>
+        <a href="">Link 4</a>
     </footer>
+    
+    <script type="text/javascript" src="nav.js"></script>
 </body>
 </html>

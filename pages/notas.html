@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Notas</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <!--Revisar que la etiqueta nav esté igual en todas las carpetas-->
-            <p class="logo">Kim Hernández</p>
-            <ul>
+    <header class="header">
+        <div>
+            <a href="../index.html" class="logo">Kim Hernández</a>
+        </div>
+        <nav class="nav">
+            <ul class="nav-links">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./experiencia.html">Experiencia</a></li>
-                <li>Notas</li>
+                <li><a href="./notas.html">Notas</a></li>
                 <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
+        <a onclick="openNav()" class="menu" href="#"><button>Menú</button></a>
+
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="../index.html">Inicio</a>
+                <a href="./experiencia.html">Experiencia</a>
+                <a href="./notas.html">Notas</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./contacto.html">Contacto</a>
+            </div>
+        </div>
 
     </header>
 
@@ -27,5 +42,16 @@
         <p>Lorem ipsum dolor sit amet.</p>
 
     </main>
+    
+    <footer>
+        <a href="">Link 1</a>
+        <a href="">Link 2</a>
+        <a href="">Link 3</a>
+        <a href="">Link 4</a>
+    </footer>
+
+    <script type="text/javascript" src="nav.js"></script>
+
 </body>
+
 </html>
