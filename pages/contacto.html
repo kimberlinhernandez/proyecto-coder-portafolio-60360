@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Contacto</title>
 </head>
+
 <body>
     <header class="header">
         <div>
@@ -35,20 +37,54 @@
 
     </header>
 
-    <main>
-        <!-- Aquí me falta insertar la imagen-->
-        <h2>Texto de prueba</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, sit?</p>
-
-    </main>
+    <div class="container-formulario">
+        <main class="main-contacto">
+            <!-- Aquí me falta insertar la imagen-->
+            <h1>Contacto</h1>
+            <p>¿Tienes una idea brillante que quieres llevar a cabo pero necesitas ayuda para darle vida en palabras? Llena el formulario y déjame saber cómo puedo ayudarte.</p>
+    
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="Escribe tu correo electrónico" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje o consulta aquí" required></textarea>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="aceptar-politica" name="aceptar-politica" required>
+                    <label for="aceptar-politica">Acepto la política de privacidad</label>
+                </div>
+        
+                <div class="form-group">
+                    <a href="#">Consultar aquí la política de privacidad</a></p>
+                </div>    
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+    
 
     <footer>
-        <a href="">Link 1</a>
-        <a href="">Link 2</a>
-        <a href="">Link 3</a>
-        <a href="">Link 4</a>
+        <div>
+            <p>© 2024 Kim Hernández - Todos los derechos reservados.</p>
+        </div>
+        <div class="enlaces-footer">
+            <a href="https://www.linkedin.com/newsletters/contra-el-bloqueo-creativo-7045132165625311232/">Suscríbete a
+                mi Newsletter</a>
+            <a href="https://medium.com/@kimhernandezwork">Lo que escribo en Medium</a>
+            <a href="https://www.instagram.com/khernandez.wr/">Mis fotografías</a>
+        </div>
     </footer>
-    
+
     <script type="text/javascript" src="nav.js"></script>
 </body>
+
 </html>

@@ -79,11 +79,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
+body{
   font-family: "DM Sans", sans-serif;
   font-size: 20px;
+  margin: 10px;
+  padding:10px;
+  width: 100%;
 }
+
 
 img {
   max-width: 100%;
@@ -107,7 +110,6 @@ a {
   font-size: x-large;
   width: auto;
   color: #BF3617;
-  text-shadow: #8C2D18;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -138,29 +140,35 @@ a {
 .menu {
   display: none;
 }
+
 /*-- Aquí me falta ponerle cuándo inicia y cuándo acaba para que no se rompa --*/
 
-@media screen and (max-width: 900px){
-  .nav-links, .menu {
+@media screen and (max-width: 900px) {
+
+  .nav-links,
+  .menu {
     display: none;
   }
+
   .menu {
-    display: inherit;
+    display: block;
   }
+
   .header .menu button {
     margin-left: 20px;
     font-weight: 700;
     padding: 9px 25px;
     background-color: bisque;
-    color:#BF3617;
+    color: #BF3617;
     border: none;
     border-radius: 50px;
-    cursor:pointer;
+    cursor: pointer;
     transition: all 0.3s ease 0s;
   }
-  .header .menu button:hover{
+
+  .header .menu button:hover {
     background-color: bisque;
-    color:#8C2D18;
+    color: #8C2D18;
     transform: scale(1.1);
   }
 }
@@ -171,7 +179,7 @@ a {
 .header a {
   text-decoration: none;
 }
-  
+
 
 .header .overlay {
   height: 100%;
@@ -204,7 +212,7 @@ a {
 
 .header .overlay a:hover,
 .header .overlay a:focus {
-  color:#8C2D18;
+  color: #8C2D18;
 }
 
 .header .overlay .close {
@@ -230,13 +238,169 @@ a {
 
 /*-- Portada index --*/
 
+/* Estilos para la sección de la portada */
 .portada {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px;
   min-height: 50vh;
 }
+
+.portada .presentacion {
+  max-width: 50%; 
+}
+
+.imagen-portada {
+  width: 40%; 
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .portada {
+    flex-direction: column; 
+    text-align: center; 
+  }
+
+  .portada .presentacion {
+    max-width: 100%; 
+    margin-right: 0;
+    margin-bottom: 20px; 
+  }
+
+  .imagen-portada {
+    width: 80%; 
+  }
+}
+/* Animación para cambiar las palabras - HAY UN ERROR AQUÍ Y TAMPOCO LOGRO DAR CON LA RAZÓN */
+@keyframes changeWord {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+#changing-word {
+  animation: changeWord 5s infinite; /* Cambia cada 8 segundos */
+}
+
+/* Estilos para la sección de "Mi Trabajo" */
+#mi-trabajo {
+  padding: 20px;
+}
+
+#mi-trabajo .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#mi-trabajo .titulo-secciones {
+  color: #BF3617;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#mi-trabajo p {
+  color: #0D0D0D;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#mi-trabajo a {
+  background-color: #BF3617;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+#mi-trabajo a:hover {
+  background-color: #8C2D18;
+}
+
+/* Responsive celular */
+@media screen and (max-width: 768px) {
+  .portada {
+      flex-direction: column;
+  }
+
+  .portada .presentacion {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .portada img {
+      max-width: 100%;
+  }
+
+  #mi-trabajo .container {
+      align-items: center;
+  }
+}
+
+/*-- Estilos generales --*/
+
+a:hover {
+  color: #8C2D18;
+  font-weight: bold;
+}
+
+/*--Estilos home sección blog --*/
+.articulos-blog {
+  padding: 20px;
+}
+
+.titulo-secciones {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.articulos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.articulos {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.articulos img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.articulos h3,
+.articulos p {
+  margin: 10px;
+}
+
+.articulos button {
+  align-self: flex-start;
+  margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .articulos {
+      width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .articulos {
+      width: 100%;
+  }
+}
+
+
+
+/*-- PARA NO PERDER ESTO QUE MODIFIQUÉ HACIENDO PRUEBAS
 
 .portada img {
   display: flex;
@@ -270,11 +434,6 @@ section h3 {
   font-style: normal;
 }
 
-a:hover {
-  color: #8C2D18;
-  font-weight: bold;
-}
-
 .articulos-blog {
   display: flex;
   flex-wrap: wrap;
@@ -283,20 +442,245 @@ a:hover {
 article {
   flex: 300px;
 }
+--*/ 
 
-/*-- Estilos para botones 
-Este se le aplica directamente al botón 
-font-weight: 700;
-color: ;
-padding: 9px 25px;
-background: ; 
-border: none;
-border-radius: 50px;
-cursor: pointer;
-transition: all 0.3 ease 0s;
+/*-- Main contacto--*/
 
-este es el hover del button
-background-color: ;
-color: ;
-transform; scale (1.1)
---*/
+.container-formulario {
+  display:block;
+}
+
+.main-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  text-align:start;
+  padding: 20px;
+  height: calc(60vh - 120px);
+  margin-top: 20px;
+}
+
+.main-contacto h1 {
+  margin-bottom: 30px;
+}
+
+.main-contacto p{
+  margin-bottom: 80px;
+  font-size: large;
+}
+
+/*-- Página de blog --*/
+/* Estilos para la página principal del blog */
+.articulos-blog {
+  padding: 20px;
+}
+
+.titulo-secciones {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.articulos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.articulo-destacado {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.articulo-destacado .imagen-destacada {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.articulo-destacado .texto-destacado {
+  width: 50%;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.articulos {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.imagenes-container {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.articulos h3,
+.articulos p {
+  margin: 10px;
+}
+
+.articulos button {
+  align-self: flex-start;
+  margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .articulos {
+      width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .articulos {
+      width: 100%;
+  }
+}
+
+
+/*-- Página de contacto - Formulario --*/
+
+form {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #8C2D18;
+  font-weight:300;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #8C2D18;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/*-- Política de privacidad del formulario --*/
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+  color: #0D0D0D;
+}
+
+.form-group p {
+  margin-top: 10px;
+  font-size: small;
+}
+
+.form-group p a {
+  color: #BF3617;
+  text-decoration: none;
+}
+
+.form-group p a:hover {
+  color: #8C2D18;
+}
+
+button {
+  background-color: #BF3617;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8C2D18;
+}
+
+@media (max-width: 600px) {
+  .main-contacto {
+    padding: 10px;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
+/*-- Footer --*/
+footer {
+  display: flex;
+  background-color:whitesmoke;
+  color:#0D0D0D;
+  margin-top: 20px;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: medium;
+}
+
+.enlaces-footer {
+  display: flex;
+  gap:20px;
+}
+
+.enlaces-footer a {
+  color: #BF3617;
+  font-size:medium;
+  text-decoration:underline;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+}
+
+.enlaces-footer a:hover {
+  color: gray;
+}
+/* Footes para pantallas pequeñas */
+
+@media screen and (max-width: 768px) {
+  .enlaces-footer {
+    flex-direction: column; 
+    align-items:center;
+    gap:10px;
+  }
+}
+
+/* Footer para escritorio */
+@media screen and (min-width: 769px) {
+  .enlaces-footer {
+   margin-top: 10px;
+  }
+}
