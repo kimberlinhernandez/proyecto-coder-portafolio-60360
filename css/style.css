@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 // <uniquifier>: Use a uniquifier for the class name
 // <weight>: Use a value from 100 to 1000
@@ -71,22 +72,20 @@
 
 
 */
-
 /*-- Reseteo de CSS --*/
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   font-family: "DM Sans", sans-serif;
   font-size: 20px;
   margin: 10px;
-  padding:10px;
+  padding: 10px;
   width: 100%;
 }
-
 
 img {
   max-width: 100%;
@@ -97,13 +96,18 @@ a {
 }
 
 /*--Header / Nav --*/
-
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 95px;
   padding: 50px 10%;
+}
+.header .nav-links {
+  list-style: none;
+}
+.header .nav-links .nav-links-active {
+  font-weight: bolder;
 }
 
 .logo {
@@ -113,13 +117,8 @@ a {
   cursor: pointer;
   transition: all 0.3s;
 }
-
 .logo:hover {
   transform: scale(1.3);
-}
-
-.header .nav-links {
-  list-style: none;
 }
 
 .header .nav-links li {
@@ -134,7 +133,7 @@ a {
 
 .header .nav-links li:hover,
 .overlay a:hover {
-  transform: scale(1.0);
+  transform: scale(1);
 }
 
 .menu {
@@ -142,18 +141,14 @@ a {
 }
 
 /*-- Aquí me falta ponerle cuándo inicia y cuándo acaba para que no se rompa --*/
-
 @media screen and (max-width: 900px) {
-
   .nav-links,
   .menu {
     display: none;
   }
-
   .menu {
     display: block;
   }
-
   .header .menu button {
     margin-left: 20px;
     font-weight: 700;
@@ -165,21 +160,16 @@ a {
     cursor: pointer;
     transition: all 0.3s ease 0s;
   }
-
   .header .menu button:hover {
     background-color: bisque;
     color: #8C2D18;
     transform: scale(1.1);
   }
 }
-
 /*-- Nav --*/
-
-
 .header a {
   text-decoration: none;
 }
-
 
 .header .overlay {
   height: 100%;
@@ -226,62 +216,64 @@ a {
   .header .overlay a {
     font-size: 20px;
   }
-
   .header .overlay .close {
     font-size: 40px;
     top: 15px;
     right: 35px;
   }
 }
-
 /*-- Estilos de móvil - Nav --*/
-
 /*-- Portada index --*/
-
 /* Estilos para la sección de la portada */
 .portada {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
   min-height: 50vh;
 }
 
 .portada .presentacion {
-  max-width: 50%; 
+  max-width: 50%;
 }
 
 .imagen-portada {
-  width: 40%; 
+  width: 40%;
 }
 
 /* Media query para pantallas pequeñas */
 @media screen and (max-width: 768px) {
   .portada {
-    flex-direction: column; 
-    text-align: center; 
+    flex-direction: column;
+    text-align: center;
   }
-
   .portada .presentacion {
-    max-width: 100%; 
+    max-width: 100%;
     margin-right: 0;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
-
   .imagen-portada {
-    width: 80%; 
+    width: 80%;
   }
 }
 /* Animación para cambiar las palabras - HAY UN ERROR AQUÍ Y TAMPOCO LOGRO DAR CON LA RAZÓN */
 @keyframes changeWord {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
 #changing-word {
-  animation: changeWord 5s infinite; /* Cambia cada 8 segundos */
+  animation: changeWord 5s infinite;
+  /* Cambia cada 8 segundos */
 }
 
 /* Estilos para la sección de "Mi Trabajo" */
@@ -323,26 +315,21 @@ a {
 /* Responsive celular */
 @media screen and (max-width: 768px) {
   .portada {
-      flex-direction: column;
+    flex-direction: column;
   }
-
   .portada .presentacion {
-      max-width: 100%;
-      margin-right: 0;
-      margin-bottom: 20px;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
-
   .portada img {
-      max-width: 100%;
+    max-width: 100%;
   }
-
   #mi-trabajo .container {
-      align-items: center;
+    align-items: center;
   }
 }
-
 /*-- Estilos generales --*/
-
 a:hover {
   color: #8C2D18;
   font-weight: bold;
@@ -388,74 +375,68 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .articulos {
-      width: calc(50% - 20px);
+    width: calc(50% - 20px);
   }
 }
-
 @media screen and (max-width: 480px) {
   .articulos {
-      width: 100%;
+    width: 100%;
   }
 }
-
-
-
 /*-- PARA NO PERDER ESTO QUE MODIFIQUÉ HACIENDO PRUEBAS
 
-.portada img {
-  display: flex;
-  width: 40%;
-  justify-content: right;
-}
+  .portada img {
+    display: flex;
+    width: 40%;
+    justify-content: right;
+  }
 
-p {
-  color: #0D0D0D;
-  font-family: "Lato", sans-serif;
-  font-size: 1rem;
-  font-style: normal;
-  margin-left: 20px;
-}
+  p {
+    color: #0D0D0D;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    margin-left: 20px;
+  }
 
-.titulo-secciones {
-  color: #BF3617;
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  margin-left: 10px;
-}
+  .titulo-secciones {
+    color: #BF3617;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    margin-left: 10px;
+  }
 
 
-section h3 {
-  color: #0D0D0D;
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
+  section h3 {
+    color: #0D0D0D;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-.articulos-blog {
-  display: flex;
-  flex-wrap: wrap;
-}
+  .articulos-blog {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-article {
-  flex: 300px;
-}
---*/ 
-
+  article {
+    flex: 300px;
+  }
+  --*/
 /*-- Main contacto--*/
-
 .container-formulario {
-  display:block;
+  display: block;
 }
 
 .main-contacto {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
-  text-align:start;
+  align-items: center;
+  text-align: start;
   padding: 20px;
   height: calc(60vh - 120px);
   margin-top: 20px;
@@ -465,7 +446,7 @@ article {
   margin-bottom: 30px;
 }
 
-.main-contacto p{
+.main-contacto p {
   margin-bottom: 80px;
   font-size: large;
 }
@@ -531,19 +512,15 @@ article {
 
 @media screen and (max-width: 768px) {
   .articulos {
-      width: calc(50% - 20px);
+    width: calc(50% - 20px);
   }
 }
-
 @media screen and (max-width: 480px) {
   .articulos {
-      width: 100%;
+    width: 100%;
   }
 }
-
-
 /*-- Página de contacto - Formulario --*/
-
 form {
   width: 80%;
   max-width: 600px;
@@ -562,11 +539,11 @@ label {
   display: block;
   margin-bottom: 5px;
   color: #8C2D18;
-  font-weight:300;
+  font-weight: 300;
 }
 
-input[type="text"],
-input[type="email"],
+input[type=text],
+input[type=email],
 textarea {
   width: 100%;
   padding: 10px;
@@ -575,10 +552,10 @@ textarea {
   transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
+input[type=text]:focus,
+input[type=email]:focus,
 textarea:focus {
-    border-color: #8C2D18;
+  border-color: #8C2D18;
 }
 
 textarea {
@@ -586,14 +563,13 @@ textarea {
 }
 
 /*-- Política de privacidad del formulario --*/
-
 .checkbox-group {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.checkbox-group input[type="checkbox"] {
+.checkbox-group input[type=checkbox] {
   margin-right: 10px;
 }
 
@@ -634,53 +610,49 @@ button:hover {
   .main-contacto {
     padding: 10px;
   }
-
   form {
     width: 100%;
   }
 }
-
 /*-- Footer --*/
 footer {
   display: flex;
-  background-color:whitesmoke;
-  color:#0D0D0D;
+  background-color: whitesmoke;
+  color: #0D0D0D;
   margin-top: 20px;
   padding: 20px;
   justify-content: space-between;
   align-items: center;
   font-size: medium;
 }
-
-.enlaces-footer {
+footer .enlaces-footer {
   display: flex;
-  gap:20px;
+  gap: 20px;
 }
-
-.enlaces-footer a {
+footer .enlaces-footer .enlaces-footer a {
   color: #BF3617;
-  font-size:medium;
-  text-decoration:underline;
+  font-size: medium;
+  text-decoration: underline;
   transition: background-color 0.3s ease;
   margin-top: 5px;
 }
-
-.enlaces-footer a:hover {
+footer .enlaces-footer .enlaces-footer a .enlaces-footer a:hover {
   color: gray;
 }
-/* Footes para pantallas pequeñas */
 
+/* Footer para pantallas pequeñas */
 @media screen and (max-width: 768px) {
   .enlaces-footer {
-    flex-direction: column; 
-    align-items:center;
-    gap:10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 }
-
 /* Footer para escritorio */
 @media screen and (min-width: 769px) {
   .enlaces-footer {
-   margin-top: 10px;
+    margin-top: 10px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
