@@ -273,7 +273,7 @@ a {
 }
 #changing-word {
   animation: changeWord 5s infinite;
-  /* Cambia cada 8 segundos */
+  /* Cambia cada 5 segundos */
 }
 
 /* Estilos para la sección de "Mi Trabajo" */
