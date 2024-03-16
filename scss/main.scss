@@ -109,8 +109,22 @@ a {
     .nav-links {
         list-style: none;
 
-        .nav-links-active {
-            font-weight: bolder;
+        li {
+            display: inline-block;
+            padding: 0 20px;
+
+            a {
+                font-size: 700;
+                color: #0D0D0D;
+
+                &:hover {
+                    transform: scale(1.0);
+                }
+
+                &-active {
+                    font-weight: bolder;
+                }
+            }
         }
     }
 }
@@ -127,19 +141,22 @@ a {
     }
 }
 
-.header .nav-links li {
-    display: inline-block;
-    padding: 0 20px;
+/* .header .nav-links li {
+    
 }
-
 .header .nav-links a {
-    font-size: 700;
-    color: #0D0D0D;
+    
 }
-
 .header .nav-links li:hover,
 .overlay a:hover {
-    transform: scale(1.0);
+   
+}
+*/
+
+.overlay {
+    a:hover {
+        transform: scale(1.0);
+    }
 }
 
 .menu {
