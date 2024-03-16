@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header">
         <div>
             <a href="../index.html" class="logo">Kim Hernández</a>
@@ -23,6 +24,7 @@
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
+        <!-- Menú hamburguesa -->
         <a onclick="openNav()" class="menu" href="#"><button>Menú</button></a>
 
         <div class="overlay" id="mobile-menu">
@@ -42,50 +44,52 @@
         <main class="main-contacto">
             <!-- Aquí me falta insertar la imagen-->
             <h1>Contacto</h1>
-            <p>¿Tienes una idea brillante que quieres llevar a cabo pero necesitas ayuda para darle vida en palabras? Llena el formulario y déjame saber cómo puedo ayudarte.</p>
-    
+            <p>¿Tienes una idea brillante que quieres llevar a cabo pero necesitas ayuda para darle vida en palabras?
+                Llena el formulario y déjame saber cómo puedo ayudarte.</p>
+
             <form action="#" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required>
                 </div>
-    
+
                 <div class="form-group">
                     <label for="correo">Correo electrónico</label>
                     <input type="email" id="correo" name="correo" placeholder="Escribe tu correo electrónico" required>
                 </div>
-    
+
                 <div class="form-group">
                     <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje o consulta aquí" required></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje o consulta aquí"
+                        required></textarea>
                 </div>
                 <div class="checkbox-group">
                     <input type="checkbox" id="aceptar-politica" name="aceptar-politica" required>
                     <label for="aceptar-politica">Acepto la política de privacidad</label>
                 </div>
-        
+
                 <div class="form-group">
                     <a href="#">Consultar aquí la política de privacidad</a></p>
-                </div>    
-    
+                </div>
+
                 <button type="submit">Enviar</button>
             </form>
         </main>
-    
-
-    <footer>
-        <div>
-            <p>© 2024 Kim Hernández - Todos los derechos reservados.</p>
-        </div>
-        <div class="enlaces-footer">
-            <a href="https://www.linkedin.com/newsletters/contra-el-bloqueo-creativo-7045132165625311232/">Suscríbete a
-                mi Newsletter</a>
-            <a href="https://medium.com/@kimhernandezwork">Lo que escribo en Medium</a>
-            <a href="https://www.instagram.com/khernandez.wr/">Mis fotografías</a>
-        </div>
-    </footer>
-
-    <script type="text/javascript" src="../nav.js"></script>
+        <!-- Footer -->
+        <footer>
+            <div>
+                <p>© 2024 Kim Hernández - Todos los derechos reservados.</p>
+            </div>
+            <div class="enlaces-footer">
+                <a href="https://www.linkedin.com/newsletters/contra-el-bloqueo-creativo-7045132165625311232/">Suscríbete
+                    a
+                    mi Newsletter</a>
+                <a href="https://medium.com/@kimhernandezwork">Lo que escribo en Medium</a>
+                <a href="https://www.instagram.com/khernandez.wr/">Mis fotografías</a>
+            </div>
+        </footer>
+        <!-- Conexión con archivo JavaScript -->
+        <script type="text/javascript" src="../nav.js"></script>
 </body>
 
 </html>
