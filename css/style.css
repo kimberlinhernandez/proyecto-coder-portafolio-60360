@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*-- Hacer los partials y aquí en el MAIN solo va IMPORT --*/
 /*
 // <uniquifier>: Use a uniquifier for the class name
 // <weight>: Use a value from 100 to 1000
@@ -72,6 +71,7 @@
 }
 
 */
+/*-- bases del proyecto, titulos, tamaños, tipografias, reseteo, modificaciones de listas, clases para activar flexbox --*/
 /*-- Reseteo de CSS --*/
 * {
   margin: 0;
@@ -96,6 +96,13 @@ a {
 }
 
 /*-- Variables --*/
+/*-- Estilos generales --*/
+a:hover {
+  color: #8C2D18;
+  font-weight: bold;
+}
+
+/* -- Me falta aquí poner todas las variables del proyecto --*/
 /*--Header / Nav --*/
 .header {
   display: flex;
@@ -223,7 +230,6 @@ a {
     right: 35px;
   }
 }
-/*-- Estilos de móvil - Nav --*/
 /*-- Portada index --*/
 /* Estilos para la sección de la portada */
 .portada {
@@ -233,7 +239,6 @@ a {
   padding: 20px;
   min-height: 50vh;
 }
-
 .portada .presentacion {
   max-width: 50%;
 }
@@ -330,46 +335,34 @@ a {
     align-items: center;
   }
 }
-/*-- Estilos generales --*/
-a:hover {
-  color: #8C2D18;
-  font-weight: bold;
-}
-
 /*--Estilos home sección blog --*/
 .articulos-blog {
   padding: 20px;
 }
-
-.titulo-secciones {
+.articulos-blog .titulo-secciones {
   text-align: center;
   margin-bottom: 20px;
 }
-
-.articulos-container {
+.articulos-blog .articulos-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
-.articulos {
+.articulos-blog .articulos-container .articulos {
   width: calc(33.33% - 20px);
   margin-bottom: 20px;
   flex-direction: column;
 }
-
-.articulos img {
+.articulos-blog .articulos-container .articulos img {
   width: 100%;
   height: auto;
   border-radius: 20px;
 }
-
-.articulos h3,
-.articulos p {
+.articulos-blog .articulos-container .articulos h3,
+.articulos-blog .articulos-container .articulos p {
   margin: 10px;
 }
-
-.articulos button {
+.articulos-blog .articulos-container .articulos button {
   align-self: flex-start;
   margin: 10px;
 }
@@ -409,75 +402,6 @@ a:hover {
   font-size: large;
 }
 
-/*-- Página de blog --*/
-/* Estilos para la página principal del blog */
-.articulos-blog {
-  padding: 20px;
-}
-
-.titulo-secciones {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.articulos-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.articulo-destacado {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.articulo-destacado .imagen-destacada {
-  width: 50%;
-  border-radius: 10px;
-}
-
-.articulo-destacado .texto-destacado {
-  width: 50%;
-  padding: 0 20px;
-  text-align: left;
-}
-
-.articulos {
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.imagenes-container {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.articulos h3,
-.articulos p {
-  margin: 10px;
-}
-
-.articulos button {
-  align-self: flex-start;
-  margin: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .articulos {
-    width: calc(50% - 20px);
-  }
-}
-@media screen and (max-width: 480px) {
-  .articulos {
-    width: 100%;
-  }
-}
 /*-- Página de contacto - Formulario --*/
 form {
   width: 80%;
@@ -570,46 +494,6 @@ button:hover {
   }
   form {
     width: 100%;
-  }
-}
-/*-- Footer --*/
-footer {
-  display: flex;
-  background-color: whitesmoke;
-  color: #0D0D0D;
-  margin-top: 20px;
-  padding: 20px;
-  justify-content: space-between;
-  align-items: center;
-  font-size: medium;
-}
-footer .enlaces-footer {
-  display: flex;
-  gap: 20px;
-}
-footer .enlaces-footer .enlaces-footer a {
-  color: #BF3617;
-  font-size: medium;
-  text-decoration: underline;
-  transition: background-color 0.3s ease;
-  margin-top: 5px;
-}
-footer .enlaces-footer .enlaces-footer a .enlaces-footer a:hover {
-  color: gray;
-}
-
-/* Footer para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-  .enlaces-footer {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-}
-/* Footer para escritorio */
-@media screen and (min-width: 769px) {
-  .enlaces-footer {
-    margin-top: 10px;
   }
 }
 
