@@ -1,0 +1,146 @@
+/*--Header / Nav --*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 95px;
+    padding: 50px 10%;
+
+    .nav-links {
+        list-style: none;
+
+        li {
+            display: inline-block;
+            padding: 0 20px;
+
+            a {
+                font-size: 700;
+                color:$color-primary;
+
+                &:hover {
+                    transform: scale(1.0);
+                }
+
+                &-active {
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}
+
+.logo {
+    font-size: x-large;
+    width: auto;
+    color: #BF3617;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        transform: scale(1.3);
+    }
+}
+
+.overlay {
+    a:hover {
+        transform: scale(1.0);
+    }
+}
+
+.menu {
+    display: none;
+}
+
+/*-- Aquí me falta ponerle cuándo inicia y cuándo acaba para que no se rompa --*/
+
+@media screen and (max-width: 900px) {
+
+    .nav-links,
+    .menu {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .header .menu button {
+        margin-left: 20px;
+        font-weight: 700;
+        padding: 9px 25px;
+        background-color: bisque;
+        color: #BF3617;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header .menu button:hover {
+        background-color: bisque;
+        color: #8C2D18;
+        transform: scale(1.1);
+    }
+}
+
+/*-- Nav --*/
+
+
+.header a {
+    text-decoration: none;
+}
+
+
+.header .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: antiquewhite;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color:$color-primary;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus {
+    color: #8C2D18;
+}
+
+.header .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height: 450px) {
+    .header .overlay a {
+        font-size: 20px;
+    }
+
+    .header .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
