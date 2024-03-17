@@ -16,10 +16,26 @@
 
             a {
                 font-size: 700;
-                color:$color-primary;
+                color: $color-primary;
+                position: relative;
 
                 &:hover {
                     transform: scale(1.0);
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 0%;
+                    height: 2px;
+                    bottom: -3px;
+                    left: 0;
+                    background-color: $color-primary;
+                    transition: width 0.3s ease;
                 }
 
                 &-active {
@@ -118,7 +134,7 @@
     display: block;
     transition: all 0.3s ease 0s;
     font-weight: 700;
-    color:$color-primary;
+    color: $color-primary;
 }
 
 .header .overlay a:hover,
