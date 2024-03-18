@@ -615,5 +615,10 @@ button:hover {
     width: 100%;
   }
 }
+/* Estilos de secciones */
+.resumen-experiencia, .trabajos-experiencia {
+  padding: 20px;
+  margin-bottom: 40px;
+}
 
 /*# sourceMappingURL=style.css.map */
