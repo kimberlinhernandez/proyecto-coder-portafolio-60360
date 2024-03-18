@@ -1,5 +1,168 @@
-i/* Estilos de secciones */
-.resumen-experiencia, .trabajos-experiencia {
+/*-- FALTA HACERLO RESPONSIVE --*/
+
+/*-- FALTA AGREGAR ESTILOS EN LA SECCIÓN DE RESUMEN --*/
+
+/*-- FALTA MEJORAR LA POSICIÓN DE LA ILUSTRACIÓN --*/
+
+/* -- Estilos de hero -- */
+.hero-experiencia {
+    display: flex;
+    align-items: center;
+    justify-content:center;
     padding: 20px;
     margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid $color-secondary;
+}
+
+.hero-experiencia-content {
+    max-width: 50%;
+    text-align: left;
+}
+
+.hero-experiencia-content h1 {
+    flex: 2;
+    padding-left: 3%;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.hero-experiencia-content p {
+    flex: 2;
+    padding-left: 3%;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.hero-imagen-container {
+    flex: 1;
+    display: flex;
+    max-width: 50%;
+}
+
+.hero-imagen {
+    width: 80%;
+    height: auto;
+    animation: bounce 8s infinite;
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Estilos de secciones */
+.resumen-experiencia,
+.trabajos-experiencia {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.resumen-experiencia {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulos-principales {
+    color: $color-primary;
+}
+
+.trabajos-experiencia {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.trabajos-experiencia h3 {
+    color: $color-primary;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.trabajos-experiencia ul {
+    list-style-type: none;
+}
+
+.trabajos-experiencia li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.trabajos-experiencia li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.header-experiencia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header-experiencia h4 {
+    font-size: 20px;
+}
+
+.header-experiencia span {
+    color: $color-accent;
+    margin-left: auto;
+    margin-right: 2em;
+}
+
+/* Estilos para los puntos */
+.points {
+    margin-left: 0;
+    padding-left: 20px;
+    padding-right: 350px;
+    width: calc(100% - 20px);
+    list-style: none;
+}
+
+.points-internos {
+    margin-bottom: 10px;
+    border-bottom: none;
+}
+
+/* Estilos para los botones */
+.botones {
+    display: flex;
+    margin-left: auto;
+}
+
+.boton-cv {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: $color-background;
+    color: $color-text;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.boton-cv:hover {
+    background-color: $color-background;
+    color: $color-primary;
+    transform: translateY(-5px);
+}
+
+/* Animaciones */
+.trabajos-experiencia-li {
+    transition: transform 0.3s ease;
+    /* Agregar una transición suave al desplazar los elementos */
+}
+
+.trabajos-experiencia-li:hover {
+    transform: translateY(-5px);
+    /* Levantar ligeramente el elemento al pasar el ratón sobre él */
 }

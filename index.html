@@ -8,7 +8,8 @@
     <meta name="language" content="Spanish">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Kimberlin Hernández">
-    <meta name="description" content="Explora el portafolio de Kim Hernández, copywriter y especialista en SEO. Descubre cómo su experiencia y habilidades pueden impulsar tu presencia en línea.">
+    <meta name="description"
+        content="Explora el portafolio de Kim Hernández, copywriter y especialista en SEO. Descubre cómo su experiencia y habilidades pueden impulsar tu presencia en línea.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -54,22 +55,28 @@
     <main>
         <!-- Sección | Portada -->
         <section class="portada">
-            <div>
+            <div class="texto-portada">
                 <h1 class="presentacion">Hola, mi nombre es Kimberlin Hernández y soy <span
                         id="changing-word">Copywriter...</span></h1>
-                <div>
-                    <img class="imagen-portada" src="./img/illustrations/kim-hernandez.png"
-                        alt="kim-hernandez-ilustracion">
-                </div>
+            </div>
+            <div class="imagen-portada-container">
+                <img class="imagen-portada" src="./img/illustrations/kimberlin-hernandez.svg"
+                    alt="kim-hernandez-ilustracion">
+            </div>
         </section>
         <!-- Sección | Mi trabajo -->
         <section id="mi-trabajo">
             <div class="container">
                 <h2 class="titulo-secciones">Te ayudo a encontrar las palabras correctas</h2>
-                <p>Desde el concepto hasta la ejecución, estoy dedicada a crear contenido que no solo resuene con tu
-                    audiencia. Con un enfoque creativo y estratégico, te acompaño a alcanzar tus objetivos de marketing
-                    y destacarte frente a la competencia.</p>
-                <a href="./pages/experiencia.html">Conoce mi experiencia</a>
+                <div class="texto-mi-trabajo">
+                    <p>Desde el concepto hasta la ejecución, estoy dedicada a crear contenido que no solo resuene con tu
+                        audiencia. Con un enfoque creativo y estratégico, te acompaño a alcanzar tus objetivos de
+                        marketing
+                        y destacarte frente a la competencia.</p>
+                </div>
+                <div>
+                    <a href="./pages/experiencia.html">Conoce mi experiencia</a>
+                </div>
             </div>
         </section>
         <!-- Sección | Artículos recientes del blog -->
@@ -78,6 +85,7 @@
             <div>
                 <div class="articulos-container">
                     <div class="articulos">
+                        <!--Agregarle el ALT a esta imagen-->
                         <img class="imagenes-container" src="./img/blog/articulo-uno.jpeg"
                             alt="Los secretos del copywriting: técnicas avanzadas">
                         <h3>Los secretos del copywriting: técnicas avanzadas</h3>
@@ -126,6 +134,10 @@
                             más profunda del arte de escribir.</p>
                         <button>Leer más</button>
                     </div>
+                </div>
+                <div class="botones">
+                    <a href="#" class="boton">Ir a LinkedIn</a>
+                    <a href="#" class="boton">Descargar CV</a>
                 </div>
         </section>
 

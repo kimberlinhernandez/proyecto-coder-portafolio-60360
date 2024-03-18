@@ -34,7 +34,7 @@
                     height: 2px;
                     bottom: -3px;
                     left: 0;
-                    background-color: $color-primary;
+                    background-color: $color-background;
                     transition: width 0.3s ease;
                 }
 
@@ -49,7 +49,7 @@
 .logo {
     font-size: x-large;
     width: auto;
-    color: #BF3617;
+    color: $color-text;
     cursor: pointer;
     transition: all 0.3s;
 
@@ -85,8 +85,8 @@
         margin-left: 20px;
         font-weight: 700;
         padding: 9px 25px;
-        background-color: bisque;
-        color: #BF3617;
+        background-color: $color-background;
+        color: $color-primary;
         border: none;
         border-radius: 50px;
         cursor: pointer;
@@ -94,8 +94,8 @@
     }
 
     .header .menu button:hover {
-        background-color: bisque;
-        color: #8C2D18;
+        background-color: $color-background;
+        color: $color-text;
         transform: scale(1.1);
     }
 }
@@ -115,7 +115,7 @@
     z-index: 1;
     left: 0;
     top: 0;
-    background-color: antiquewhite;
+    background-color: $color-background;
     overflow: hidden;
     transition: all 0.3s ease 0s;
 }
@@ -139,7 +139,7 @@
 
 .header .overlay a:hover,
 .header .overlay a:focus {
-    color: #8C2D18;
+    color: $color-text;
 }
 
 .header .overlay .close {
@@ -149,11 +149,10 @@
     font-size: 65px;
 }
 
-@media screen and (max-height: 450px) {
+@include mq-mobile {
     .header .overlay a {
         font-size: 20px;
     }
-
     .header .overlay .close {
         font-size: 40px;
         top: 15px;

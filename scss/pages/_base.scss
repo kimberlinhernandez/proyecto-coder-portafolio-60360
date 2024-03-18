@@ -81,6 +81,13 @@
     box-sizing: border-box;
 }
 
+/*-- Variables --*/
+$color-primary: #0D0D0D;
+$color-secondary: #F2F2F2;
+$color-accent: #D9A384;
+$color-text: #565659;
+$color-background: #DED5F2;
+
 body {
     font-family: "DM Sans", sans-serif;
     font-size: 20px;
@@ -98,13 +105,17 @@ a {
     text-decoration: none;
 }
 
-/*-- Variables --*/
-$color-primary: black;
-
-/*-- Estilos generales --*/
+/*-- Estilos para los enlaces --*/
 
 a:hover {
-    color: #8C2D18;
+    color: $color-text;
     font-weight: bold;
 }
 /* -- Me falta aquí poner todas las variables del proyecto --*/
+
+/* -- Media Query Mobile--*/
+@mixin mq-mobile {
+  @media (min-widht: 450px) {
+    @content
+  }
+}
