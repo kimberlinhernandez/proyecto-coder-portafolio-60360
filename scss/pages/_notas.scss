@@ -1,0 +1,121 @@
+/*-- FALTA DEFINIR ESTILO DEL H1 --*/
+
+
+.notes-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .note {
+        background-color: $color-background;
+        border: 1px solid $color-secondary;
+        border-radius: 20px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+        .note-meta {
+            display: flex;
+            align-items: center;
+
+            .author-photo {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 10px;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+
+            .author-name {
+                font-weight: bold;
+            }
+            .note-date {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+/*-- FALTA ANIDAR TODA ESTA SECCIÓN --*/ 
+
+.note-meta img.author-photo,
+.note-meta strong.author-name,
+.note-meta time {
+    margin-right: 5px; 
+}
+
+.note-meta img.author-photo {
+    width: 30px; 
+    height: 30px; 
+}
+
+.note-meta time::before {
+    content: "•";
+    margin-right: 5px;
+    margin-left: 5px;
+    color: $color-accent; 
+}
+
+.note-content {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.note-title {
+    margin-bottom: 10px;
+}
+
+.note-content a {
+    color: $color-primary;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.boton-nota {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: $color-secondary;
+    color: $color-text;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $color-accent;
+        color: $color-primary;
+        font-weight: bold;
+    }
+}
+
+.etiquetas-notas button {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: $color-secondary;
+    color: $color-text;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.etiquetas-notas button:hover {
+    background-color: $color-accent;
+    color: $color-primary;
+    font-weight: bold;
+}

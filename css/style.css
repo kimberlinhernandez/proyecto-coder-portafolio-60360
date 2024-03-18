@@ -460,42 +460,50 @@ footer .enlaces-footer .enlaces-footer a .enlaces-footer a:hover {
     width: 100%;
   }
 }
+/*-- PENDIENTE ANIDAR EL CÓDIGO EN TODAS LAS PÁGINAS --*/
 /*-- Main contacto--*/
+/* Estilos para el contenedor del formulario */
 .container-formulario {
-  display: block;
-}
-
-.main-contacto {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: start;
-  padding: 20px;
-  height: calc(60vh - 120px);
-  margin-top: 20px;
+  padding-top: 50px;
 }
 
-.main-contacto h1 {
-  margin-bottom: 30px;
+/* Estilos para la imagen */
+.image-contacto {
+  margin-bottom: 20px;
 }
 
-.main-contacto p {
-  margin-bottom: 80px;
-  font-size: large;
+.image-contacto img {
+  max-width: 50%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.image-contacto img:hover {
+  transform: translateY(-5px);
 }
 
-/*-- Página de contacto - Formulario --*/
-form {
+/* Estilos para el título */
+.container-formulario h1 {
+  margin-bottom: 10px;
+}
+
+/* Estilos para el párrafo */
+.container-formulario p {
+  margin-bottom: 20px;
+}
+
+/* Estilos para el formulario */
+.main-contacto {
   width: 80%;
   max-width: 600px;
-  margin: 0 auto;
   padding: 20px;
-  background-color: whitesmoke;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos para los campos del formulario */
 .form-group {
   margin-bottom: 20px;
 }
@@ -503,8 +511,7 @@ form {
 label {
   display: block;
   margin-bottom: 5px;
-  color: #8C2D18;
-  font-weight: 300;
+  color: #565659;
 }
 
 input[type=text],
@@ -520,14 +527,14 @@ textarea {
 input[type=text]:focus,
 input[type=email]:focus,
 textarea:focus {
-  border-color: #8C2D18;
+  border-color: #F2F2F2;
 }
 
 textarea {
   resize: vertical;
 }
 
-/*-- Política de privacidad del formulario --*/
+/* Estilos para el grupo de checkboxes */
 .checkbox-group {
   display: flex;
   align-items: center;
@@ -543,23 +550,20 @@ textarea {
   color: #0D0D0D;
 }
 
-.form-group p {
-  margin-top: 10px;
-  font-size: small;
-}
-
-.form-group p a {
-  color: #BF3617;
+/* Estilos para los enlaces del formulario */
+.form-group a {
+  color: #0D0D0D;
   text-decoration: none;
 }
 
-.form-group p a:hover {
-  color: #8C2D18;
+.form-group a:hover {
+  color: #565659;
 }
 
+/* Estilos para el botón de enviar */
 button {
-  background-color: #BF3617;
-  color: #fff;
+  background-color: #D9A384;
+  color: #0D0D0D;
   padding: 10px 20px;
   border: none;
   border-radius: 50px;
@@ -568,7 +572,7 @@ button {
 }
 
 button:hover {
-  background-color: #8C2D18;
+  background-color: #DED5F2;
 }
 
 @media (max-width: 600px) {
@@ -807,6 +811,119 @@ button:hover {
 .trabajos-experiencia-li:hover {
   transform: translateY(-5px);
   /* Levantar ligeramente el elemento al pasar el ratón sobre él */
+}
+
+/*-- FALTA DEFINIR ESTILO DEL H1 --*/
+.notes-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.notes-container .note {
+  background-color: #DED5F2;
+  border: 1px solid #F2F2F2;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
+}
+.notes-container .note:hover {
+  transform: translateY(-5px);
+}
+.notes-container .note .note-meta {
+  display: flex;
+  align-items: center;
+}
+.notes-container .note .note-meta .author-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+.notes-container .note .note-meta .author-photo:hover {
+  transform: translateY(-5px);
+}
+.notes-container .note .note-meta .author-name {
+  font-weight: bold;
+}
+.notes-container .note .note-meta .note-date {
+  margin-left: auto;
+}
+
+/*-- FALTA ANIDAR TODA ESTA SECCIÓN --*/
+.note-meta img.author-photo,
+.note-meta strong.author-name,
+.note-meta time {
+  margin-right: 5px;
+}
+
+.note-meta img.author-photo {
+  width: 30px;
+  height: 30px;
+}
+
+.note-meta time::before {
+  content: "•";
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #D9A384;
+}
+
+.note-content {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.note-title {
+  margin-bottom: 10px;
+}
+
+.note-content a {
+  color: #0D0D0D;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.boton-nota {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #F2F2F2;
+  color: #565659;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.boton-nota:hover {
+  background-color: #D9A384;
+  color: #0D0D0D;
+  font-weight: bold;
+}
+
+.etiquetas-notas button {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #F2F2F2;
+  color: #565659;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.etiquetas-notas button:hover {
+  background-color: #D9A384;
+  color: #0D0D0D;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

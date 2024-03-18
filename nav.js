@@ -1,8 +1,8 @@
-function openNav (){
+function openNav() {
     document.getElementById("mobile-menu").style.width = "100%";
 }
 
-function closeNav (){
+function closeNav() {
     document.getElementById("mobile-menu").style.width = "0%";
 }
 
@@ -19,3 +19,21 @@ function changeWord() {
 
 // Llama a la función por primera vez después de un segundo
 setTimeout(changeWord, 1000);
+
+// Sección de notas // PENDIENTE VER CUÁL ES EL ERROR ACÁ, NO SE FILTRAN TODAS LAS ETIQUETAS
+function filtrarPorEtiqueta(etiqueta) {
+    // Ocultar todas las notas
+    var notas = document.querySelectorAll('.note-wrapper');
+    notas.forEach(function (nota) {
+        nota.style.display = 'none';
+    });
+
+    // Mostrar solo las notas con la etiqueta seleccionada
+    var notasConEtiqueta = document.querySelectorAll('.note-wrapper.' + etiqueta);
+    notasConEtiqueta.forEach(function (nota) {
+        nota.style.display = 'block';
+    });
+
+    // Actualizar la descripción de la sección
+    document.getElementById('descripcion-seccion').textContent = 'Notas filtradas por ' + etiqueta;
+}

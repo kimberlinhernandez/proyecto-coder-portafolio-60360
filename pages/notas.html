@@ -43,8 +43,66 @@
     </header>
 
     <main>
-        <h2 class="titulo-secciones">Headline</h2>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <h2 class="titulo-secciones">Notas</h2>
+
+        <div class="etiquetas-notas">
+            <button ><a href="./notas.html">Todas las etiquetas</a></button>
+            <button onclick="filtrarPorEtiqueta('etiqueta1')">Entrevistas</button>
+            <button onclick="filtrarPorEtiqueta('etiqueta2')">Newsletter</button>
+            <button onclick="filtrarPorEtiqueta('etiqueta3')">Opinión</button>
+        </div>
+
+        <div class="notes-container">
+            <div class="note-wrapper etiqueta3">
+            <div class="note">
+                <div class="note-meta">
+                    <img class="author-photo" src="../img/illustrations/contacto-trabajo-kimberlin-hernandez.svg" alt="">
+                    <strong class="author-name">@kimhrnndz</strong>
+                    <div>
+                    <time datetime="2024-03-18">18 de marzo de 2024</time>
+                </div>
+                </div>
+                <div class="note-content">
+                    <h2 class="note-title">La gentrificación digital • José Heinz</h2>
+                    <p>¿Por qué lo genérico es tan interesante? Este texto me pareció interesante, porque trata sobre el problema de dejar nuestras elecciones en manos de los algoritmos.</p>
+                    <a href="https://cajanegraeditora.com.ar/la-gentrificacion-digital/" target="_blank" class="boton-nota">Ir al contenido</a>
+                </div>
+            </div>
+
+            <div class="note-wrapper etiqueta1">
+                <div class="note">
+                <div class="note-meta">
+                    <img class="author-photo" src="../img/illustrations/contacto-trabajo-kimberlin-hernandez.svg" alt="">
+                    <strong class="author-name">@kimhrnndz</strong>
+                    <div>
+                    <time datetime="2024-03-18">18 de marzo de 2024</time>
+                </div>
+                </div>
+                <div class="note-content">
+                    <h2 class="note-title">Los nuevos dioses • Entrevista a Erik Davis</h2>
+                    <p>¿Son las inteligencias artificiales nuestros nuevos dioses? Erik Davis, quien es doctor en Estudios Religiosos muestra su perspectiva.</p>
+                    <a href="https://letraslibres.com/entrevistas/inigo-ibanez-erik-davis-entrevista/" target="_blank" class="boton-nota">Ir al contenido</a>
+                </div>
+            </div>
+            
+            <div class="note-wrapper etiqueta2">
+                <div class="note">
+                <div class="note-meta">
+                    <img class="author-photo" src="../img/illustrations/contacto-trabajo-kimberlin-hernandez.svg" alt="">
+                    <strong class="author-name">@kimhrnndz</strong>
+                    <div>
+                    <time datetime="2024-03-18">18 de marzo de 2024</time>
+                </div>
+                </div>
+                <div class="note-content">
+                    <h2 class="note-title">El bloqueo del escritor • Kimberlin Hernández</h2>
+                    <p>¿Por qué nos afecta tanto el bloqueo del escritor? En este texto de mi newsletter hablo sobre este tema.</p>
+                    <a href="https://www.linkedin.com/pulse/qu%25C3%25A9-es-el-bloqueo-del-escritor-kimberlin-hern%25C3%25A1ndez-gax4c/?trackingId=g1s2z%2FO1T%2BKQ%2BEZ2tj9vwg%3D%3D" target="_blank" class="boton-nota">Ir al contenido</a>
+                </div>
+            </div>
+
+        </div>
+        
 
     </main>
     <!-- Footer -->

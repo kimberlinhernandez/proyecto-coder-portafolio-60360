@@ -1,41 +1,50 @@
+/*-- PENDIENTE ANIDAR EL CÓDIGO EN TODAS LAS PÁGINAS --*/
+
 /*-- Main contacto--*/
 
+/* Estilos para el contenedor del formulario */
 .container-formulario {
-    display: block;
-}
-
-.main-contacto {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: start;
+    padding-top: 50px; 
+}
+
+/* Estilos para la imagen */
+.image-contacto {
+    margin-bottom: 20px;
+}
+
+.image-contacto img {
+    max-width: 50%;
+    height: auto;
+    transition: transform 0.3s ease;
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+
+/* Estilos para el título */
+.container-formulario h1 {
+    margin-bottom: 10px;
+}
+
+/* Estilos para el párrafo */
+.container-formulario p {
+    margin-bottom: 20px;
+}
+
+/* Estilos para el formulario */
+.main-contacto {
+    width: 80%; 
+    max-width: 600px; 
     padding: 20px;
-    height: calc(60vh - 120px);
-    margin-top: 20px;
-}
-
-.main-contacto h1 {
-    margin-bottom: 30px;
-}
-
-.main-contacto p {
-    margin-bottom: 80px;
-    font-size: large;
-}
-
-/*-- Página de contacto - Formulario --*/
-
-form {
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: whitesmoke;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos para los campos del formulario */
 .form-group {
     margin-bottom: 20px;
 }
@@ -43,8 +52,7 @@ form {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #8C2D18;
-    font-weight: 300;
+    color:$color-text; 
 }
 
 input[type="text"],
@@ -60,15 +68,14 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #8C2D18;
+    border-color: $color-secondary; 
 }
 
 textarea {
     resize: vertical;
 }
 
-/*-- Política de privacidad del formulario --*/
-
+/* Estilos para el grupo de checkboxes */
 .checkbox-group {
     display: flex;
     align-items: center;
@@ -81,26 +88,23 @@ textarea {
 
 .checkbox-group label {
     margin-bottom: 0;
-    color:$color-primary;
+    color: $color-primary; 
 }
 
-.form-group p {
-    margin-top: 10px;
-    font-size: small;
-}
-
-.form-group p a {
-    color: #BF3617;
+/* Estilos para los enlaces del formulario */
+.form-group a {
+    color: $color-primary;
     text-decoration: none;
 }
 
-.form-group p a:hover {
-    color: #8C2D18;
+.form-group a:hover {
+    color: $color-text;
 }
 
+/* Estilos para el botón de enviar */
 button {
-    background-color: #BF3617;
-    color: #fff;
+    background-color: $color-accent;
+    color: $color-primary;
     padding: 10px 20px;
     border: none;
     border-radius: 50px;
@@ -109,8 +113,9 @@ button {
 }
 
 button:hover {
-    background-color: #8C2D18;
+    background-color: $color-background; 
 }
+
 
 @media (max-width: 600px) {
     .main-contacto {
