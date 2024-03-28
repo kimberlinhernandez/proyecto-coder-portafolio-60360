@@ -1,11 +1,13 @@
 /*-- FALTA DEFINIR ESTILO DEL H1 --*/
 
+
 /*-- FALTA MARGIN Y PADDING --*/
 
 .notes-container {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
 
     .note {
         background-color: $color-background;
@@ -22,6 +24,7 @@
         .note-meta {
             display: flex;
             align-items: center;
+            margin-bottom: 10px;
 
             .author-photo {
                 width: 50px;
@@ -119,4 +122,22 @@
     background-color: $color-accent;
     color: $color-primary;
     font-weight: bold;
+}
+
+/*-- REVISAR ESTO --*/
+
+@media screen and (max-width: 768px) {
+    .note-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+
+        .author-photo {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        .author-name {
+            margin-right: 0;
+        }
+    }
 }

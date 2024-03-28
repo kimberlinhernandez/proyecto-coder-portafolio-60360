@@ -8,7 +8,7 @@
 .hero-experiencia {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     padding: 20px;
     margin-bottom: 40px;
     padding-bottom: 20px;
@@ -38,19 +38,30 @@
     flex: 1;
     display: flex;
     max-width: 50%;
+
+    .imagen-experiencia {
+        width: 80%;
+        height: auto;
+        animation: bounce 8s infinite;
+    }
+
+    @media screen and (max-width: 768px) {
+        .imagen-experiencia {
+            visibility: hidden;
+        }
+    }
 }
 
-.hero-imagen {
-    width: 80%;
-    height: auto;
-    animation: bounce 8s infinite;
-}
+
 
 /* Animación de rebote */
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-20px);
     }
@@ -64,7 +75,7 @@
 }
 
 .resumen-experiencia {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -136,6 +147,7 @@
     margin-left: auto;
 }
 
+// Estilos del botón de CV
 .boton-cv {
     display: inline-block;
     margin-left: 10px;
@@ -148,12 +160,12 @@
     font-size: 16px;
     cursor: pointer;
     transition: transform 0.3s ease;
-}
 
-.boton-cv:hover {
-    background-color: $color-background;
-    color: $color-primary;
-    transform: translateY(-5px);
+    &:hover {
+        background-color: $color-background;
+        color: $color-primary;
+        transform: translateY(-5px);
+    }
 }
 
 /* Animaciones */
