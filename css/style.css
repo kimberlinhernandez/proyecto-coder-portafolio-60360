@@ -585,73 +585,16 @@ button:hover {
 }
 /*-- Página de blog --*/
 /* Estilos para la página principal del blog */
-.articulos-blog {
-  padding: 20px;
-}
-.articulos-blog .titulo-secciones {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.articulos-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.articulo-destacado {
+.contenedor-blog {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
+  min-height: 100vh;
+  background-color: #DED5F2;
 }
 
-.texto-destacado {
-  width: 50%;
-  padding: 0 20px;
-  text-align: left;
-}
-
-.imagen-destacada {
-  width: 50%;
-  border-radius: 10px;
-}
-
-.articulos {
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-}
-.articulos .imagenes-container {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-.articulos h3,
-.articulos p {
-  margin: 10px;
-}
-.articulos button {
-  align-self: flex-start;
-  margin: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .articulos {
-    width: calc(50% - 20px);
-  }
-}
-@media screen and (max-width: 480px) {
-  .articulos {
-    width: 100%;
-  }
-}
 /*-- FALTA HACERLO RESPONSIVE --*/
 /*-- FALTA AGREGAR ESTILOS EN LA SECCIÓN DE RESUMEN --*/
 /*-- FALTA MEJORAR LA POSICIÓN DE LA ILUSTRACIÓN --*/
-/* -- Estilos de hero -- */
+/* -- Estilos de hero - REVISAR PADDING DERECHO DE ESTA SECCIÓN -- */
 .hero-experiencia {
   display: flex;
   align-items: center;
@@ -686,11 +629,15 @@ button:hover {
   display: flex;
   max-width: 50%;
 }
-
-.hero-imagen {
+.hero-imagen-container .imagen-experiencia {
   width: 80%;
   height: auto;
   animation: bounce 8s infinite;
+}
+@media screen and (max-width: 768px) {
+  .hero-imagen-container .imagen-experiencia {
+    visibility: hidden;
+  }
 }
 
 /* Animación de rebote */
@@ -795,7 +742,6 @@ button:hover {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-
 .boton-cv:hover {
   background-color: #DED5F2;
   color: #0D0D0D;
@@ -814,10 +760,12 @@ button:hover {
 }
 
 /*-- FALTA DEFINIR ESTILO DEL H1 --*/
+/*-- FALTA MARGIN Y PADDING --*/
 .notes-container {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  padding: 20px;
 }
 .notes-container .note {
   background-color: #DED5F2;
@@ -834,6 +782,7 @@ button:hover {
 .notes-container .note .note-meta {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 .notes-container .note .note-meta .author-photo {
   width: 50px;
@@ -924,6 +873,22 @@ button:hover {
   background-color: #D9A384;
   color: #0D0D0D;
   font-weight: bold;
+}
+
+/*-- REVISAR ESTO --*/
+@media screen and (max-width: 768px) {
+  .note-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .note-meta .author-photo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .note-meta .author-name {
+    margin-right: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
