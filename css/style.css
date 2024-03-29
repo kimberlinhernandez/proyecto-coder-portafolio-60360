@@ -651,7 +651,7 @@ button:hover {
 /*-- FALTA HACERLO RESPONSIVE --*/
 /*-- FALTA AGREGAR ESTILOS EN LA SECCIÓN DE RESUMEN --*/
 /*-- FALTA MEJORAR LA POSICIÓN DE LA ILUSTRACIÓN --*/
-/* -- Estilos de hero -- */
+/* -- Estilos de hero - REVISAR PADDING DERECHO DE ESTA SECCIÓN -- */
 .hero-experiencia {
   display: flex;
   align-items: center;
@@ -814,6 +814,7 @@ button:hover {
 }
 
 /*-- FALTA DEFINIR ESTILO DEL H1 --*/
+/*-- FALTA MARGIN Y PADDING --*/
 .notes-container {
   width: 100%;
   max-width: 800px;
