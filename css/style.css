@@ -88,21 +88,20 @@ body {
   width: 100%;
 }
 
-img {
-  max-width: 100%;
+/* img {
+    max-width: 100%;
 }
-
+*/
+/*-- Estilos para los enlaces --*/
 a {
   text-decoration: none;
 }
 
-/*-- Estilos para los enlaces --*/
 a:hover {
   color: #565659;
   font-weight: bold;
 }
 
-/* -- Me falta aquí poner todas las variables del proyecto --*/
 /* -- Media Query Mobile--*/
 /*--Header / Nav --*/
 .header {
@@ -296,6 +295,7 @@ footer .enlaces-footer .enlaces-footer a .enlaces-footer a:hover {
 .portada .presentacion {
   max-width: 50%;
   text-align: left;
+  font-size: 3rem;
 }
 
 .texto-portada {
@@ -384,7 +384,7 @@ footer .enlaces-footer .enlaces-footer a .enlaces-footer a:hover {
 
 #mi-trabajo p {
   color: #0D0D0D;
-  font-size: 16px;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
@@ -422,9 +422,10 @@ footer .enlaces-footer .enlaces-footer a .enlaces-footer a:hover {
 .articulos-blog {
   padding: 20px;
 }
-.articulos-blog .titulo-secciones {
+.articulos-blog .titulos-h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 .articulos-blog .articulos-container {
   display: flex;
@@ -450,16 +451,81 @@ footer .enlaces-footer .enlaces-footer a .enlaces-footer a:hover {
   margin: 10px;
 }
 
+@media screen and (max-width: 1024px) {
+  .articulos-container .articulos {
+    width: calc(50% - 20px);
+  }
+}
 @media screen and (max-width: 768px) {
-  .articulos {
+  .articulos-container .articulos {
     width: calc(50% - 20px);
   }
 }
 @media screen and (max-width: 480px) {
-  .articulos {
+  .articulos-container .articulos {
     width: 100%;
   }
 }
+/* Botones animados */
+.botones-index {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 20px auto;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 25px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.boton-blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 25%;
+  border: none;
+  color: #0D0D0D;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+.boton-blog:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .boton-blog {
+    max-width: max-content;
+  }
+}
+.boton-blog:hover {
+  color: #0D0D0D;
+  transform: translateY(-5px);
+}
+
+.boton-blog:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.boton-blog:active {
+  top: 2px;
+}
+
 /*-- PENDIENTE ANIDAR EL CÓDIGO EN TODAS LAS PÁGINAS --*/
 /*-- Main contacto--*/
 /* Estilos para el contenedor del formulario */
@@ -585,15 +651,108 @@ button:hover {
 }
 /*-- Página de blog --*/
 /* Estilos para la página principal del blog */
-.contenedor-blog {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #DED5F2;
+.bienvenida-blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
 }
 
-/*-- FALTA HACERLO RESPONSIVE --*/
-/*-- FALTA AGREGAR ESTILOS EN LA SECCIÓN DE RESUMEN --*/
-/*-- FALTA MEJORAR LA POSICIÓN DE LA ILUSTRACIÓN --*/
+.contenido-blog {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tarjetas-blog {
+  display: flex;
+  border: 1px solid #F2F2F2;
+  border-radius: 20px;
+  border-color: #DED5F2;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 1.6%;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
+}
+.tarjetas-blog:hover {
+  transform: translateY(-5px);
+}
+.tarjetas-blog img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 15px;
+}
+.tarjetas-blog .etiqueta-blog {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #565659;
+  margin-bottom: 10px;
+}
+.tarjetas-blog p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #0D0D0D;
+  line-height: 1.5;
+}
+.tarjetas-blog .note-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.tarjetas-blog .note-meta .author-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+.tarjetas-blog .note-meta .author-photo:hover {
+  transform: translateY(-5px);
+}
+.tarjetas-blog .note-meta .author-name {
+  font-weight: bold;
+}
+.tarjetas-blog .note-meta time {
+  margin-left: auto;
+}
+
+.row-tarjetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.contenedor-blog .row .bienvenida-blog {
+  width: 60%;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.contenido-blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenido-blog .tarjetas-blog {
+  flex-basis: -6.67%;
+  margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-blog .tarjetas-blog {
+    flex-basis: 10%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contenido-blog .tarjetas-blog {
+    flex-basis: calc(100% - 40px);
+  }
+}
 /* -- Estilos de hero - REVISAR PADDING DERECHO DE ESTA SECCIÓN -- */
 .hero-experiencia {
   display: flex;
@@ -613,14 +772,14 @@ button:hover {
 .hero-experiencia-content h1 {
   flex: 2;
   padding-left: 3%;
-  font-size: 2em;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 .hero-experiencia-content p {
   flex: 2;
   padding-left: 3%;
-  font-size: 1.2em;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 
@@ -692,17 +851,16 @@ button:hover {
   border-bottom: none;
 }
 
+/* Estilos generales del header de experiencia */
 .header-experiencia {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
-
 .header-experiencia h4 {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
-
 .header-experiencia span {
   color: #D9A384;
   margin-left: auto;
@@ -751,16 +909,22 @@ button:hover {
 /* Animaciones */
 .trabajos-experiencia-li {
   transition: transform 0.3s ease;
-  /* Agregar una transición suave al desplazar los elementos */
 }
 
 .trabajos-experiencia-li:hover {
   transform: translateY(-5px);
-  /* Levantar ligeramente el elemento al pasar el ratón sobre él */
 }
 
 /*-- FALTA DEFINIR ESTILO DEL H1 --*/
 /*-- FALTA MARGIN Y PADDING --*/
+.bienvenida-notas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
+}
+
 .notes-container {
   width: 100%;
   max-width: 800px;
@@ -768,9 +932,9 @@ button:hover {
   padding: 20px;
 }
 .notes-container .note {
-  background-color: #DED5F2;
   border: 1px solid #F2F2F2;
   border-radius: 20px;
+  border-color: #DED5F2;
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 50px;

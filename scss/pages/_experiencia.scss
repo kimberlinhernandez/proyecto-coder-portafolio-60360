@@ -1,8 +1,3 @@
-/*-- FALTA HACERLO RESPONSIVE --*/
-
-/*-- FALTA AGREGAR ESTILOS EN LA SECCIÓN DE RESUMEN --*/
-
-/*-- FALTA MEJORAR LA POSICIÓN DE LA ILUSTRACIÓN --*/
 
 /* -- Estilos de hero - REVISAR PADDING DERECHO DE ESTA SECCIÓN -- */
 .hero-experiencia {
@@ -23,14 +18,14 @@
 .hero-experiencia-content h1 {
     flex: 2;
     padding-left: 3%;
-    font-size: 2em;
+    font-size: $font-size-h1;
     font-weight: bold;
 }
 
 .hero-experiencia-content p {
     flex: 2;
     padding-left: 3%;
-    font-size: 1.2em;
+    font-size: $font-size-principal-text;
     line-height: 1.5;
 }
 
@@ -110,22 +105,24 @@
     border-bottom: none;
 }
 
+/* Estilos generales del header de experiencia */
 .header-experiencia {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+
+    h4 {
+        font-size: $font-size-h3;
+    }
+
+    span {
+        color: $color-accent;
+        margin-left: auto;
+        margin-right: 2em;
+    }
 }
 
-.header-experiencia h4 {
-    font-size: 20px;
-}
-
-.header-experiencia span {
-    color: $color-accent;
-    margin-left: auto;
-    margin-right: 2em;
-}
 
 /* Estilos para los puntos */
 .points {
@@ -171,10 +168,8 @@
 /* Animaciones */
 .trabajos-experiencia-li {
     transition: transform 0.3s ease;
-    /* Agregar una transición suave al desplazar los elementos */
 }
 
 .trabajos-experiencia-li:hover {
     transform: translateY(-5px);
-    /* Levantar ligeramente el elemento al pasar el ratón sobre él */
 }

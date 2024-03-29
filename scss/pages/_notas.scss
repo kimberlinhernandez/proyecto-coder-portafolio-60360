@@ -3,6 +3,14 @@
 
 /*-- FALTA MARGIN Y PADDING --*/
 
+.bienvenida-notas {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+}
+
 .notes-container {
     width: 100%;
     max-width: 800px;
@@ -10,9 +18,9 @@
     padding: 20px;
 
     .note {
-        background-color: $color-background;
         border: 1px solid $color-secondary;
         border-radius: 20px;
+        border-color: $color-background;
         padding: 20px;
         margin-top: 20px;
         margin-bottom: 50px;
