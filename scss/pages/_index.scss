@@ -3,20 +3,23 @@
 /* Estilos para la sección de la portada */
 .portada {
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 
     .presentacion {
         max-width: 50%;
         text-align: left;
+        font-size: $font-size-h1;
     }
 }
+
 .texto-portada {
     flex: 2;
     padding-left: 8%;
     font-size: large;
 }
+
 .imagen-portada {
     max-width: 100%;
     background-color: white;
@@ -25,18 +28,23 @@
 .imagen-portada-container {
     flex: 1;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     padding-right: 8%;
 }
+
 /* -- Animación --*/
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-20px);
     }
 }
+
 /* Aplicar la animación*/
 .imagen-portada {
     animation: bounce 8s infinite;
@@ -103,7 +111,7 @@
 
 #mi-trabajo p {
     color: #0D0D0D;
-    font-size: 16px;
+    font-size: $font-size-principal-text;
     margin-bottom: 20px;
 }
 
@@ -145,9 +153,10 @@
 .articulos-blog {
     padding: 20px;
 
-    .titulo-secciones {
+    .titulos-h2 {
         text-align: center;
         margin-bottom: 20px;
+        font-size: $font-size-h2;
     }
 
     .articulos-container {
@@ -180,14 +189,85 @@
 }
 
 
+@media screen and (max-width: 1024px) {
+    .articulos-container .articulos {
+        width: calc(50% - 20px);
+    }
+}
+
 @media screen and (max-width: 768px) {
-    .articulos {
+    .articulos-container .articulos {
         width: calc(50% - 20px);
     }
 }
 
 @media screen and (max-width: 480px) {
-    .articulos {
+    .articulos-container .articulos {
         width: 100%;
     }
+    }
+
+/* Botones animados */
+
+.botones-index {
+    display: block;
+    width: auto;
+    height: auto;
+   margin: 20px auto;
+    color: #fff;
+    border: none;
+    border-radius: $border-button;
+    padding: 10px 25px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.boton-blog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width:25%;
+    border: none;
+    color: $color-primary;
+    margin: 0 auto;
+    font-size: $font-size-h2;
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        direction: rtl;
+        z-index: -1;
+        transition: transform 0.3s ease;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .boton-blog {
+        max-width: max-content;
+    }
+    }
+
+.boton-blog:hover {
+    color: $color-primary;
+    transform: translateY(-5px)
+}
+
+.boton-blog:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+
+.boton-blog:active {
+    top: 2px;
 }

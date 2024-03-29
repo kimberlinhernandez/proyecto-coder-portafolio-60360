@@ -88,6 +88,17 @@ $color-accent: #D9A384;
 $color-text: #565659;
 $color-background: #DED5F2;
 
+$font-size-principal-text: 1.5rem;
+$font-size-text: 0.9rem;
+$font-size-h1: 3rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.5rem;
+$font-size-h4: 1rem;
+$font-size-tags: 0.8rem;
+
+$border-img: 15px;
+$border-button: 20px;
+
 body {
     font-family: "DM Sans", sans-serif;
     font-size: 20px;
@@ -96,22 +107,23 @@ body {
     width: 100%;
 }
 
-
-img {
+/* img {
     max-width: 100%;
 }
+*/
+
+
+/*-- Estilos para los enlaces --*/
 
 a {
     text-decoration: none;
 }
 
-/*-- Estilos para los enlaces --*/
-
 a:hover {
     color: $color-text;
     font-weight: bold;
 }
-/* -- Me falta aquí poner todas las variables del proyecto --*/
+
 
 /* -- Media Query Mobile--*/
 @mixin mq-mobile {
