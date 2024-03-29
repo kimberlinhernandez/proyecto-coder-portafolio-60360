@@ -1,77 +1,4 @@
 @charset "UTF-8";
-/*
-// <uniquifier>: Use a uniquifier for the class name
-// <weight>: Use a value from 100 to 1000
-
-.dm-sans-<uniquifier> {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-.lato-thin {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.lato-thin-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.lato-light {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.lato-light-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.lato-regular {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.lato-regular-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.lato-bold {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.lato-bold-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.lato-black {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.lato-black-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-*/
-/*-- bases del proyecto, titulos, tamaños, tipografias, reseteo, modificaciones de listas, clases para activar flexbox --*/
 /*-- Reseteo de CSS --*/
 * {
   margin: 0;
@@ -83,20 +10,17 @@
 body {
   font-family: "DM Sans", sans-serif;
   font-size: 20px;
-  margin: 10px;
-  padding: 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+  padding: 20px;
   width: 100%;
 }
 
-/* img {
-    max-width: 100%;
-}
-*/
 /*-- Estilos para los enlaces --*/
 a {
-  text-decoration: none;
+  color: #0D0D0D;
+  font-weight: 300;
 }
-
 a:hover {
   color: #565659;
   font-weight: bold;
@@ -260,9 +184,6 @@ footer .enlaces-footer {
   gap: 20px;
 }
 footer .enlaces-footer .enlaces-footer a {
-  color: #BF3617;
-  font-size: medium;
-  text-decoration: underline;
   transition: background-color 0.3s ease;
   margin-top: 5px;
 }
@@ -350,19 +271,22 @@ footer .enlaces-footer .enlaces-footer a .enlaces-footer a:hover {
   0% {
     opacity: 0;
   }
-  20% {
+  5% {
     opacity: 1;
   }
-  80% {
+  25% {
     opacity: 1;
+  }
+  30% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
   }
 }
 #changing-word {
-  animation: changeWord 5s infinite;
-  /* Cambia cada 5 segundos */
+  animation: changeWord 2s initial;
+  /* Cambia cada 2 segundos */
 }
 
 /* Estilos para la sección de "Mi Trabajo" */
@@ -418,52 +342,76 @@ footer .enlaces-footer .enlaces-footer a .enlaces-footer a:hover {
     align-items: center;
   }
 }
-/*--Estilos home sección blog --*/
-.articulos-blog {
-  padding: 20px;
+/* Estilos blog */
+.blog {
+  padding: 4.5rem 0;
+  max-width: 1200px;
+  /* Limita el ancho máximo del contenido */
+  margin: 0 auto;
+  /* Centra el contenido horizontalmente */
 }
-.articulos-blog .titulos-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2rem;
+
+.texto-blog a {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #DED5F2;
+  color: #565659;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
-.articulos-blog .articulos-container {
+.texto-blog a:hover {
+  background-color: #DED5F2;
+  color: #0D0D0D;
+  transform: translateY(-5px);
+}
+
+.blog-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.articulos-blog .articulos-container .articulos {
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
-  flex-direction: column;
-}
-.articulos-blog .articulos-container .articulos img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-}
-.articulos-blog .articulos-container .articulos h3,
-.articulos-blog .articulos-container .articulos p {
-  margin: 10px;
-}
-.articulos-blog .articulos-container .articulos button {
-  align-self: flex-start;
-  margin: 10px;
+
+.blog-item {
+  width: calc((100% - 6rem) / 3);
+  /* Ancho de cada artículo para desktop (3 ítems por fila) */
+  margin-bottom: 4rem;
+  /* Espacio entre los artículos */
 }
 
+.blog-img {
+  position: relative;
+  overflow: hidden;
+  /* Evita que las imágenes se desborden */
+}
+
+.blog-img img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  /* Establece un ancho máximo para las imágenes */
+  display: block;
+  border-radius: 15px;
+}
+
+/* Estilos para tablet (2 ítems por fila) */
 @media screen and (max-width: 1024px) {
-  .articulos-container .articulos {
-    width: calc(50% - 20px);
+  .blog-item {
+    width: calc((100% - 4rem) / 2);
+    /* Para tablet: 2 ítems por fila */
+    margin-right: 2rem;
+    /* Espacio entre los ítems */
   }
 }
+/* Estilos para móvil (1 ítem por fila) */
 @media screen and (max-width: 768px) {
-  .articulos-container .articulos {
-    width: calc(50% - 20px);
-  }
-}
-@media screen and (max-width: 480px) {
-  .articulos-container .articulos {
+  .blog-item {
     width: 100%;
+    /* Establece el ancho de cada artículo para móvil (1 ítem por fila) */
   }
 }
 /* Botones animados */
@@ -484,6 +432,10 @@ footer .enlaces-footer .enlaces-footer a .enlaces-footer a:hover {
   outline: none;
 }
 
+.contenedor-boton-index {
+  padding-bottom: 50px;
+}
+
 .boton-blog {
   display: flex;
   align-items: center;
@@ -496,6 +448,8 @@ footer .enlaces-footer .enlaces-footer a .enlaces-footer a:hover {
 }
 .boton-blog:after {
   position: absolute;
+  background-color: #DED5F2;
+  border-radius: 20px;
   content: "";
   width: 0;
   height: 100%;
@@ -551,12 +505,10 @@ footer .enlaces-footer .enlaces-footer a .enlaces-footer a:hover {
   transform: translateY(-5px);
 }
 
-/* Estilos para el título */
+/* Estilos para el título y el párrafo */
 .container-formulario h1 {
   margin-bottom: 10px;
 }
-
-/* Estilos para el párrafo */
 .container-formulario p {
   margin-bottom: 20px;
 }
@@ -606,11 +558,9 @@ textarea {
   align-items: center;
   margin-bottom: 20px;
 }
-
 .checkbox-group input[type=checkbox] {
   margin-right: 10px;
 }
-
 .checkbox-group label {
   margin-bottom: 0;
   color: #0D0D0D;
@@ -621,7 +571,6 @@ textarea {
   color: #0D0D0D;
   text-decoration: none;
 }
-
 .form-group a:hover {
   color: #565659;
 }
@@ -636,7 +585,6 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 button:hover {
   background-color: #DED5F2;
 }
@@ -692,7 +640,8 @@ button:hover {
   margin-bottom: 10px;
 }
 .tarjetas-blog p {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  font-weight: 500;
   margin-top: 10px;
   color: #0D0D0D;
   line-height: 1.5;
@@ -753,50 +702,33 @@ button:hover {
     flex-basis: calc(100% - 40px);
   }
 }
-/* -- Estilos de hero - REVISAR PADDING DERECHO DE ESTA SECCIÓN -- */
+/* -- Estilos de hero -- */
 .hero-experiencia {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   padding: 20px;
   margin-bottom: 40px;
   padding-bottom: 20px;
-  border-bottom: 3px solid #F2F2F2;
+  padding-top: 50px;
+  margin-right: 20px;
+  background-color: #DED5F2;
+  border-radius: 15px;
 }
-
-.hero-experiencia-content {
-  max-width: 50%;
+.hero-experiencia .hero-experiencia-content {
+  max-width: 90%;
   text-align: left;
+  padding-bottom: 20px;
 }
-
-.hero-experiencia-content h1 {
+.hero-experiencia .hero-experiencia-content h1 {
   flex: 2;
   padding-left: 3%;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 800;
 }
-
-.hero-experiencia-content p {
+.hero-experiencia .hero-experiencia-content p {
   flex: 2;
   padding-left: 3%;
   font-size: 1.5rem;
-  line-height: 1.5;
-}
-
-.hero-imagen-container {
-  flex: 1;
-  display: flex;
-  max-width: 50%;
-}
-.hero-imagen-container .imagen-experiencia {
-  width: 80%;
-  height: auto;
-  animation: bounce 8s infinite;
-}
-@media screen and (max-width: 768px) {
-  .hero-imagen-container .imagen-experiencia {
-    visibility: hidden;
-  }
 }
 
 /* Animación de rebote */
@@ -814,41 +746,46 @@ button:hover {
   padding: 20px;
   margin-bottom: 40px;
 }
-
-.resumen-experiencia {
+.resumen-experiencia.resumen-experiencia,
+.trabajos-experiencia.resumen-experiencia {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.titulos-principales {
-  color: #0D0D0D;
+.resumen-experiencia.resumen-experiencia-sumario,
+.trabajos-experiencia.resumen-experiencia-sumario {
+  padding: 20px;
+  margin-bottom: 40px;
 }
-
-.trabajos-experiencia {
+.resumen-experiencia.trabajos-experiencia,
+.trabajos-experiencia.trabajos-experiencia {
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
 }
-
-.trabajos-experiencia h3 {
+.resumen-experiencia.trabajos-experiencia h3,
+.trabajos-experiencia.trabajos-experiencia h3 {
   color: #0D0D0D;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
-
-.trabajos-experiencia ul {
+.resumen-experiencia.trabajos-experiencia ul,
+.trabajos-experiencia.trabajos-experiencia ul {
   list-style-type: none;
 }
-
-.trabajos-experiencia li {
+.resumen-experiencia.trabajos-experiencia ul li,
+.trabajos-experiencia.trabajos-experiencia ul li {
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-
-.trabajos-experiencia li:last-child {
+.resumen-experiencia.trabajos-experiencia ul li:last-child,
+.trabajos-experiencia.trabajos-experiencia ul li:last-child {
   margin-bottom: 0;
   border-bottom: none;
+}
+
+.titulos-principales {
+  color: #0D0D0D;
 }
 
 /* Estilos generales del header de experiencia */
@@ -863,19 +800,19 @@ button:hover {
 }
 .header-experiencia span {
   color: #D9A384;
-  margin-left: auto;
-  margin-right: 2em;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
 }
 
 /* Estilos para los puntos */
 .points {
   margin-left: 0;
   padding-left: 20px;
-  padding-right: 350px;
+  padding-right: 100px;
   width: calc(100% - 20px);
   list-style: none;
 }
-
 .points-internos {
   margin-bottom: 10px;
   border-bottom: none;
@@ -915,8 +852,6 @@ button:hover {
   transform: translateY(-5px);
 }
 
-/*-- FALTA DEFINIR ESTILO DEL H1 --*/
-/*-- FALTA MARGIN Y PADDING --*/
 .bienvenida-notas {
   display: flex;
   flex-direction: column;
@@ -960,12 +895,13 @@ button:hover {
 }
 .notes-container .note .note-meta .author-name {
   font-weight: bold;
+  font-size: 1.5rem;
 }
 .notes-container .note .note-meta .note-date {
   margin-left: auto;
 }
 
-/*-- FALTA ANIDAR TODA ESTA SECCIÓN --*/
+/*-- Imagen autor --*/
 .note-meta img.author-photo,
 .note-meta strong.author-name,
 .note-meta time {
@@ -984,20 +920,28 @@ button:hover {
   color: #D9A384;
 }
 
+/* Estilos para la nota */
 .note-content {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-
-.note-title {
-  margin-bottom: 10px;
+.note-content p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #0D0D0D;
+  line-height: 1.5;
 }
-
 .note-content a {
   color: #0D0D0D;
   display: inline-block;
   padding: 10px;
   cursor: pointer;
+}
+
+.note-title {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
 }
 
 .boton-nota {
@@ -1007,14 +951,14 @@ button:hover {
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
-  background-color: #F2F2F2;
+  background-color: #DED5F2;
   color: #565659;
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
 }
 .boton-nota:hover {
-  background-color: #D9A384;
+  background-color: #DED5F2;
   color: #0D0D0D;
   font-weight: bold;
 }
@@ -1029,17 +973,15 @@ button:hover {
   background-color: #F2F2F2;
   color: #565659;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 0.8rem;
   cursor: pointer;
 }
-
 .etiquetas-notas button:hover {
   background-color: #D9A384;
   color: #0D0D0D;
   font-weight: bold;
 }
 
-/*-- REVISAR ESTO --*/
 @media screen and (max-width: 768px) {
   .note-meta {
     flex-direction: column;

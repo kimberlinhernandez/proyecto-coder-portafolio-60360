@@ -74,12 +74,16 @@
         opacity: 0;
     }
 
-    20% {
+    5% {
         opacity: 1;
     }
 
-    80% {
+    25% {
         opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
     }
 
     100% {
@@ -88,8 +92,8 @@
 }
 
 #changing-word {
-    animation: changeWord 5s infinite;
-    /* Cambia cada 5 segundos */
+    animation: changeWord 2s initial;
+    /* Cambia cada 2 segundos */
 }
 
 /* Estilos para la sección de "Mi Trabajo" */
@@ -149,63 +153,82 @@
     }
 }
 
-/*--Estilos home sección blog --*/
-.articulos-blog {
-    padding: 20px;
+/* Estilos blog */
+.blog {
+    padding: 4.5rem 0;
+    max-width: 1200px;
+    /* Limita el ancho máximo del contenido */
+    margin: 0 auto;
+    /* Centra el contenido horizontalmente */
+}
 
-    .titulos-h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: $font-size-h2;
-    }
+.texto-blog a{
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: $color-background;
+    color: $color-text;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 
-    .articulos-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        .articulos {
-            width: calc(33.33% - 20px);
-            margin-bottom: 20px;
-            flex-direction: column;
-
-            img {
-                width: 100%;
-                height: auto;
-                border-radius: 20px;
-            }
-
-            h3,
-            p {
-                margin: 10px;
-            }
-
-            button {
-                align-self: flex-start;
-                margin: 10px;
-            }
-        }
+    &:hover {
+        background-color: $color-background;
+        color: $color-primary;
+        transform: translateY(-5px);
     }
 }
 
 
+.blog-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog-item {
+    width: calc((100% - (3 * 2rem)) / 3);
+    ;
+    /* Ancho de cada artículo para desktop (3 ítems por fila) */
+    margin-bottom: 4rem;
+    /* Espacio entre los artículos */
+}
+
+.blog-img {
+    position: relative;
+    overflow: hidden;
+    /* Evita que las imágenes se desborden */
+}
+
+.blog-img img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    /* Establece un ancho máximo para las imágenes */
+    display: block;
+    border-radius: $border-img;
+}
+
+/* Estilos para tablet (2 ítems por fila) */
 @media screen and (max-width: 1024px) {
-    .articulos-container .articulos {
-        width: calc(50% - 20px);
+    .blog-item {
+        width: calc((100% - (2 * 2rem)) / 2);
+        /* Para tablet: 2 ítems por fila */
+        margin-right: 2rem;
+        /* Espacio entre los ítems */
     }
 }
 
+/* Estilos para móvil (1 ítem por fila) */
 @media screen and (max-width: 768px) {
-    .articulos-container .articulos {
-        width: calc(50% - 20px);
+    .blog-item {
+        width: 100%;
+        /* Establece el ancho de cada artículo para móvil (1 ítem por fila) */
     }
 }
-
-@media screen and (max-width: 480px) {
-    .articulos-container .articulos {
-        width: 100%;
-    }
-    }
 
 /* Botones animados */
 
@@ -213,7 +236,7 @@
     display: block;
     width: auto;
     height: auto;
-   margin: 20px auto;
+    margin: 20px auto;
     color: #fff;
     border: none;
     border-radius: $border-button;
@@ -228,11 +251,15 @@
     outline: none;
 }
 
+.contenedor-boton-index {
+    padding-bottom: 50px;
+}
+
 .boton-blog {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width:25%;
+    max-width: 25%;
     border: none;
     color: $color-primary;
     margin: 0 auto;
@@ -240,6 +267,8 @@
 
     &:after {
         position: absolute;
+        background-color: $color-background;
+        border-radius: $border-button;
         content: "";
         width: 0;
         height: 100%;
@@ -255,7 +284,7 @@
     .boton-blog {
         max-width: max-content;
     }
-    }
+}
 
 .boton-blog:hover {
     color: $color-primary;

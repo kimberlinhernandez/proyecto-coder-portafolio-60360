@@ -1,52 +1,35 @@
 
-/* -- Estilos de hero - REVISAR PADDING DERECHO DE ESTA SECCIÓN -- */
+/* -- Estilos de hero -- */
 .hero-experiencia {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     padding: 20px;
     margin-bottom: 40px;
     padding-bottom: 20px;
-    border-bottom: 3px solid $color-secondary;
-}
+    padding-top: 50px;
+    margin-right: 20px;
+    background-color: $color-background;
+    border-radius: $border-img;
 
-.hero-experiencia-content {
-    max-width: 50%;
-    text-align: left;
-}
+    .hero-experiencia-content {
+        max-width: 90%;
+        text-align: left;
+        padding-bottom: 20px;
 
-.hero-experiencia-content h1 {
-    flex: 2;
-    padding-left: 3%;
-    font-size: $font-size-h1;
-    font-weight: bold;
-}
+        h1 {
+            flex: 2;
+            padding-left: 3%;
+            font-size: $font-size-h1;
+            font-weight: $font-weight-strong;
+        }
 
-.hero-experiencia-content p {
-    flex: 2;
-    padding-left: 3%;
-    font-size: $font-size-principal-text;
-    line-height: 1.5;
-}
-
-.hero-imagen-container {
-    flex: 1;
-    display: flex;
-    max-width: 50%;
-
-    .imagen-experiencia {
-        width: 80%;
-        height: auto;
-        animation: bounce 8s infinite;
-    }
-
-    @media screen and (max-width: 768px) {
-        .imagen-experiencia {
-            visibility: hidden;
+        p {
+            flex: 2;
+            padding-left: 3%;
+            font-size: $font-size-principal-text;
         }
     }
 }
-
 
 
 /* Animación de rebote */
@@ -67,43 +50,49 @@
 .trabajos-experiencia {
     padding: 20px;
     margin-bottom: 40px;
-}
 
-.resumen-experiencia {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    &.resumen-experiencia {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-sumario {
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &.trabajos-experiencia {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+
+        h3 {
+            color: $color-primary;
+            font-size: $font-size-h3;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+
+            li {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
 }
 
 .titulos-principales {
     color: $color-primary;
 }
 
-.trabajos-experiencia {
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.trabajos-experiencia h3 {
-    color: $color-primary;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.trabajos-experiencia ul {
-    list-style-type: none;
-}
-
-.trabajos-experiencia li {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-}
-
-.trabajos-experiencia li:last-child {
-    margin-bottom: 0;
-    border-bottom: none;
-}
 
 /* Estilos generales del header de experiencia */
 .header-experiencia {
@@ -118,24 +107,24 @@
 
     span {
         color: $color-accent;
-        margin-left: auto;
-        margin-right: 2em;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size:$font-size-text;
     }
 }
-
 
 /* Estilos para los puntos */
 .points {
     margin-left: 0;
     padding-left: 20px;
-    padding-right: 350px;
+    padding-right: 100px;
     width: calc(100% - 20px);
     list-style: none;
-}
 
-.points-internos {
-    margin-bottom: 10px;
-    border-bottom: none;
+    &-internos {
+        margin-bottom: 10px;
+        border-bottom: none;
+    }
 }
 
 /* Estilos para los botones */
@@ -164,7 +153,6 @@
         transform: translateY(-5px);
     }
 }
-
 /* Animaciones */
 .trabajos-experiencia-li {
     transition: transform 0.3s ease;

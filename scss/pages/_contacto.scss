@@ -26,15 +26,17 @@
     }
 }
 
-/* Estilos para el título */
-.container-formulario h1 {
-    margin-bottom: 10px;
+/* Estilos para el título y el párrafo */
+.container-formulario {
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
 }
 
-/* Estilos para el párrafo */
-.container-formulario p {
-    margin-bottom: 20px;
-}
 
 /* Estilos para el formulario */
 .main-contacto {
@@ -80,26 +82,29 @@ textarea {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-}
 
-.checkbox-group input[type="checkbox"] {
-    margin-right: 10px;
-}
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
 
-.checkbox-group label {
-    margin-bottom: 0;
-    color: $color-primary; 
+    label {
+        margin-bottom: 0;
+        color: $color-primary; 
+    }
 }
 
 /* Estilos para los enlaces del formulario */
-.form-group a {
-    color: $color-primary;
-    text-decoration: none;
+.form-group {
+    a {
+        color: $color-primary;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-text;
+        }
+    }
 }
 
-.form-group a:hover {
-    color: $color-text;
-}
 
 /* Estilos para el botón de enviar */
 button {
@@ -110,11 +115,12 @@ button {
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $color-background; 
+    }
 }
 
-button:hover {
-    background-color: $color-background; 
-}
 
 
 @media (max-width: 600px) {

@@ -1,77 +1,4 @@
-/*
-// <uniquifier>: Use a uniquifier for the class name
-// <weight>: Use a value from 100 to 1000
 
-.dm-sans-<uniquifier> {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-.lato-thin {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.lato-thin-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.lato-light {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.lato-light-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.lato-regular {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.lato-regular-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.lato-bold {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.lato-bold-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.lato-black {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.lato-black-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-*/
-
-/*-- bases del proyecto, titulos, tamaños, tipografias, reseteo, modificaciones de listas, clases para activar flexbox --*/
 
 /*-- Reseteo de CSS --*/
 
@@ -89,7 +16,10 @@ $color-text: #565659;
 $color-background: #DED5F2;
 
 $font-size-principal-text: 1.5rem;
-$font-size-text: 0.9rem;
+$font-size-text: 1.2rem;
+$font-weight-tiny: 300;
+$font-weight-medium: 500;
+$font-weight-strong:800;
 $font-size-h1: 3rem;
 $font-size-h2: 2rem;
 $font-size-h3: 1.5rem;
@@ -102,26 +32,21 @@ $border-button: 20px;
 body {
     font-family: "DM Sans", sans-serif;
     font-size: 20px;
-    margin: 10px;
-    padding: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 20px;
     width: 100%;
 }
 
-/* img {
-    max-width: 100%;
-}
-*/
-
-
 /*-- Estilos para los enlaces --*/
-
 a {
-    text-decoration: none;
-}
+  color: $color-primary;
+  font-weight: $font-weight-tiny;
 
-a:hover {
-    color: $color-text;
-    font-weight: bold;
+  &:hover {
+      color: $color-text;
+      font-weight: bold;
+  }
 }
 
 

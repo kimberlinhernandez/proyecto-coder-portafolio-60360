@@ -1,10 +1,6 @@
-/*-- FALTA DEFINIR ESTILO DEL H1 --*/
-
-
-/*-- FALTA MARGIN Y PADDING --*/
 
 .bienvenida-notas {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -29,6 +25,7 @@
         &:hover {
             transform: translateY(-5px);
         }
+
         .note-meta {
             display: flex;
             align-items: center;
@@ -48,7 +45,9 @@
 
             .author-name {
                 font-weight: bold;
+                font-size: $font-size-h3;
             }
+
             .note-date {
                 margin-left: auto;
             }
@@ -56,40 +55,50 @@
     }
 }
 
-/*-- FALTA ANIDAR TODA ESTA SECCIÓN --*/ 
+/*-- Imagen autor --*/
 
 .note-meta img.author-photo,
 .note-meta strong.author-name,
 .note-meta time {
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 .note-meta img.author-photo {
-    width: 30px; 
-    height: 30px; 
+    width: 30px;
+    height: 30px;
 }
 
 .note-meta time::before {
     content: "•";
     margin-right: 5px;
     margin-left: 5px;
-    color: $color-accent; 
+    color: $color-accent;
 }
 
+/* Estilos para la nota */
 .note-content {
     margin-top: 10px;
     margin-bottom: 20px;
+
+    p {
+        font-size: $font-size-text;
+        font-weight: $font-weight-medium;
+        margin-top: 10px;
+        color: $color-primary;
+        line-height: 1.5;
+    }
+
+    a {
+        color: $color-primary;
+        display: inline-block;
+        padding: 10px;
+        cursor: pointer;
+    }
 }
 
 .note-title {
     margin-bottom: 10px;
-}
-
-.note-content a {
-    color: $color-primary;
-    display: inline-block;
-    padding: 10px;
-    cursor: pointer;
+    font-size: $font-size-h3;
 }
 
 .boton-nota {
@@ -99,40 +108,41 @@
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background-color: $color-secondary;
+    background-color: $color-background;
     color: $color-text;
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
 
-    &:hover{
-        background-color: $color-accent;
+    &:hover {
+        background-color: $color-background;
         color: $color-primary;
         font-weight: bold;
     }
 }
 
-.etiquetas-notas button {
-    display: inline-block;
-    margin-top: 20px;
-    margin-left: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: $color-secondary;
-    color: $color-text;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
+.etiquetas-notas {
+    button {
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        background-color: $color-secondary;
+        color: $color-text;
+        text-decoration: none;
+        font-size: $font-size-tags;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-accent;
+            color: $color-primary;
+            font-weight: bold;
+        }
+    }
 }
 
-.etiquetas-notas button:hover {
-    background-color: $color-accent;
-    color: $color-primary;
-    font-weight: bold;
-}
-
-/*-- REVISAR ESTO --*/
 
 @media screen and (max-width: 768px) {
     .note-meta {
@@ -144,6 +154,7 @@
             margin-right: 0;
             margin-bottom: 10px;
         }
+
         .author-name {
             margin-right: 0;
         }
